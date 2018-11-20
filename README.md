@@ -2,7 +2,7 @@
 
 > Convert a string to mOcKiNgCaSe.
 
-<img align="right" width="300" src="https://github.com/strdr4605/mockingcase/blob/master/mOcKiNgsPoNgEbOb.png" alt="mocking spongebob" />
+<img align="right" width="300" src="https://raw.githubusercontent.com/strdr4605/mockingcase/master/mOcKiNgsPoNgEbOb.png" alt="mocking spongebob" />
 
 Inspired by the meme [Mocking Spongebob](https://knowyourmeme.com/memes/mocking-spongebob). and http://dannypage.github.io/spongebob.html
 
