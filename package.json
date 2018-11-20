@@ -1,0 +1,17 @@
+{
+  "name": "mockingcase",
+  "version": "0.0.0",
+  "description": "Convert a string to mOcKiNgCaSe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "case",
+    "text",
+    "string",
+    "convert"
+  ],
+  "author": "Dragoș Străinu",
+  "license": "ISC"
+}
