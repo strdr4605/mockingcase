@@ -4,7 +4,7 @@
 
 <img align="right" width="300" src="https://raw.githubusercontent.com/strdr4605/mockingcase/master/mOcKiNgsPoNgEbOb.png" alt="mocking spongebob" />
 
-Inspired by the meme [Mocking Spongebob](https://knowyourmeme.com/memes/mocking-spongebob). and http://dannypage.github.io/spongebob.html
+Inspired by the meme [Mocking Spongebob](https://knowyourmeme.com/memes/mocking-spongebob) and http://dannypage.github.io/spongebob.html
 
 ## Install
 
