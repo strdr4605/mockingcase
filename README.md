@@ -44,7 +44,7 @@ mOcKiNgCaSe('4Foo!$ B2ar');
 ### mOcKiNgCaSe(input) ⇒ <code>string</code>
 This function receives a string input and converts it to mOcKiNgCaSe.
 
-**Returns**: <code>string</code> - string
+**Returns**: <code>string</code> - string in mOcKiNgCaSe
 
 | Param | Type | Description |
 | --- | --- | --- |
