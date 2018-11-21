@@ -41,11 +41,12 @@ mOcKiNgCaSe('4Foo!$ B2ar');
 
 ## API
 
-### mOcKiNgCaSe(input) ⇒ <code>string</code>
+### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
 This function receives a string input and converts it to mOcKiNgCaSe.
 
-**Returns**: <code>string</code> - string
+**Returns**: <code>string</code> - string in mOcKiNgCaSe
 
-| Param | Type | Description |
-| --- | --- | --- |
-| input | <code>string</code> | string to be converted |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| input | <code>string</code> |  | string to be converted |
+| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
