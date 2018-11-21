@@ -1,4 +1,4 @@
-# mOcKiNgCaSe
+# mOcKiNgCaSe [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase)
 
 > Convert a string to mOcKiNgCaSe.
 
