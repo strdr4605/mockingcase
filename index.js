@@ -4,7 +4,7 @@
  * This function receives a string input and converts it to mOcKiNgCaSe.
  * @param {string} input - string to be converted
  * @param {object} [options={random: false}] - options for converting
- * @param {boolean} [options.random=false] - using random for converting
+ * @param {boolean} options.random=false - using random for converting
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input, options) {
