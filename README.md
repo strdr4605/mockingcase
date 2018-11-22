@@ -20,6 +20,15 @@ const mOcKiNgCaSe = require('mockingcase');
 mOcKiNgCaSe('foo-bar');
 //=> 'fOo-bAr'
 
+mOcKiNgCaSe('aa', {random: false});
+//=> 'aA'
+
+mOcKiNgCaSe('aa', {random: true});
+//=> 'aa'
+//=> 'aA'
+//=> 'Aa'
+//=> 'AA'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
@@ -41,11 +50,13 @@ mOcKiNgCaSe('4Foo!$ B2ar');
 
 ## API
 
-### mOcKiNgCaSe(input) ⇒ <code>string</code>
+### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
 This function receives a string input and converts it to mOcKiNgCaSe.
 
 **Returns**: <code>string</code> - string in mOcKiNgCaSe
 
-| Param | Type | Description |
-| --- | --- | --- |
-| input | <code>string</code> | string to be converted |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| input | <code>string</code> |  | string to be converted |
+| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
+| options.random | <code>boolean</code> | <code>false</code> | using random for converting |
