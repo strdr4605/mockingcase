@@ -20,6 +20,15 @@ const mOcKiNgCaSe = require('mockingcase');
 mOcKiNgCaSe('foo-bar');
 //=> 'fOo-bAr'
 
+mOcKiNgCaSe('aa', {random: false});
+//=> 'aA'
+
+mOcKiNgCaSe('aa', {random: true});
+//=> 'aa'
+//=> 'aA'
+//=> 'Aa'
+//=> 'AA'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
