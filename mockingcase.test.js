@@ -12,4 +12,13 @@ describe('mockingcase', () => {
     const expectedOutput = '1234567890hElLo wOrLd!@#$%^&*()_+[]{},./<>?`~\\';
     expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
   });
+
+  test('Returned string should have same length as input string', () => {
+    const input = 'hello world';
+    const options = {
+      random: true
+    };
+    expect(mOcKiNgCaSe(input)).toHaveLength(input.length);
+    expect(mOcKiNgCaSe(input, options)).toHaveLength(input.length);
+  });
 });
