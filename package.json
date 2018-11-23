@@ -8,9 +8,15 @@
     "email": "str.dr4605@gmail.com"
   },
   "main": "index.js",
+  "engines": {
+		"node": ">=6"
+	},
   "scripts": {
     "test": "jest"
   },
+  "files": [
+		"index.js"
+	],
   "keywords": [
     "case",
     "text",
