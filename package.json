@@ -1,6 +1,6 @@
 {
   "name": "mockingcase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a string to mOcKiNgCaSe",
   "homepage": "https://github.com/strdr4605/mockingcase.git",
   "bugs": {
@@ -9,14 +9,14 @@
   },
   "main": "index.js",
   "engines": {
-		"node": ">=6"
-	},
+    "node": ">=6"
+  },
   "scripts": {
     "test": "jest"
   },
   "files": [
-		"index.js"
-	],
+    "index.js"
+  ],
   "keywords": [
     "case",
     "text",
