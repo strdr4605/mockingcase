@@ -8,6 +8,7 @@
     "email": "str.dr4605@gmail.com"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "engines": {
     "node": ">=6"
   },
@@ -15,6 +16,7 @@
     "test": "jest"
   },
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "keywords": [
