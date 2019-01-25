@@ -19,7 +19,8 @@ $ npm install mockingcase --save
 ```js
 const mOcKiNgCaSe = require('mockingcase');
 // es6 - import mOcKiNgCaSe from 'mockingcase';
-// ts - import mOcKiNgCaSe = require('mockingcase'); or import * as mOcKiNgCaSe from 'mockingcase';
+//  ts - import * as mOcKiNgCaSe from 'mockingcase';
+//  ts - import mOcKiNgCaSe = require('mockingcase');
 
 mOcKiNgCaSe('foo-bar');
 //=> 'fOo-bAr'
