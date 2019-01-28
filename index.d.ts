@@ -3,7 +3,7 @@
 // Definitions by: Dragoș Străinu https://github.com/strdr4605
 
 declare module 'mockingcase' {
-    export = mockingcase;
-    function mockingcase(input: string, options?: {random?: boolean}): string;
-    namespace mockingcase {}
+  export = mockingcase;
+  function mockingcase(input: string, options?: { random?: boolean }): string;
+  namespace mockingcase { }
 }

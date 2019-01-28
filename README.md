@@ -2,6 +2,8 @@
 
 > Convert a string to mOcKiNgCaSe.
 
+Read more on wikipedia [Studly caps](https://en.wikipedia.org/wiki/Studly_caps).
+
 <img align="right" width="300" src="https://raw.githubusercontent.com/strdr4605/mockingcase/master/mOcKiNgsPoNgEbOb.png" alt="mocking spongebob" />
 
 Inspired by the meme [Mocking Spongebob](https://knowyourmeme.com/memes/mocking-spongebob) and http://dannypage.github.io/spongebob.html
@@ -16,6 +18,9 @@ $ npm install mockingcase --save
 
 ```js
 const mOcKiNgCaSe = require('mockingcase');
+// es6 - import mOcKiNgCaSe from 'mockingcase';
+//  ts - import * as mOcKiNgCaSe from 'mockingcase';
+//  ts - import mOcKiNgCaSe = require('mockingcase');
 
 mOcKiNgCaSe('foo-bar');
 //=> 'fOo-bAr'
