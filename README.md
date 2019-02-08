@@ -63,5 +63,6 @@ This function receives a string input and converts it to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> |  | string to be converted |
-| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
+| [options] | <code>object</code> | <code>{random: false, firstUpper: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | inverts the capitalization of typical mOcKiNgCase  |
