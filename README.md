@@ -34,6 +34,15 @@ mOcKiNgCaSe('aa', {random: true});
 //=> 'Aa'
 //=> 'AA'
 
+mOcKiNgCaSe('aa', {firstUpper: false});
+//=> 'aA'
+
+mOcKiNgCaSe('aa', {firstUpper: true});
+//=> 'Aa'
+
+mOcKiNgCaSe('foo_bar', {firstUpper: true});
+//=> 'FoO_BaR'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
