@@ -21,4 +21,19 @@ describe('mockingcase', () => {
     expect(mOcKiNgCaSe(input)).toHaveLength(input.length);
     expect(mOcKiNgCaSe(input, options)).toHaveLength(input.length);
   });
+
+  test('log should send converted string to console.log', () => {
+    const input = 'hello world';
+    const expectedOutput = mOcKiNgCaSe(input);
+    var consoleOutput = null;
+  
+    console.log = jest.fn(output => {
+      consoleOutput = output;
+    });
+    mOcKiNgCaSe.log(input);
+    
+    expect(consoleOutput).toEqual(expectedOutput);
+  });
 });
+
+
