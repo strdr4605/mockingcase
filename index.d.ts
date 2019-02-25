@@ -5,5 +5,7 @@
 declare module 'mockingcase' {
   export = mockingcase;
   function mockingcase(input: string, options?: { random?: boolean }): string;
-  namespace mockingcase { }
+  namespace mockingcase {
+    export function log(input: string, options?: { random?: boolean }): void;
+  }
 }
