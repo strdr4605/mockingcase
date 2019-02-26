@@ -26,14 +26,24 @@ describe('mockingcase', () => {
     const input = 'hello world';
     const expectedOutput = mOcKiNgCaSe(input);
     var consoleOutput = null;
-  
+
     console.log = jest.fn(output => {
       consoleOutput = output;
     });
     mOcKiNgCaSe.log(input);
-    
+
     expect(consoleOutput).toEqual(expectedOutput);
+
+    test('If input is an array of string, it should return the mOcKiNgCaSe version of the string formed by the array elements.', () => {
+      const input = ['foo', 'bar'];
+      const expectedOutput = 'fOoBaR';
+      expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
+    });
+
+    test('If input is an array but all elements aren\'t strings, it should throw an error.', () => {
+      const input = ['foo', 'bar'];
+      const expectedOutput = '';
+      expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
+    });
   });
 });
-
-

@@ -63,5 +63,6 @@ This function receives a string input and converts it to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> |  | string to be converted |
+| input | <code>array</code>|  | array to be converted. Array must be an array of strings. __Example__: ['foo','bar'] is a valid array. ['foo',2] is not.
 | [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
