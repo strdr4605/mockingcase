@@ -18,7 +18,13 @@
       else return i % 2 ? s.toUpperCase() : s.toLowerCase()
     });
   }
-  
+
+  /**
+   * This function receives a string input and outputs a message to the console in mOcKiNgCaSe.
+   * @param {string} input - string to be converted
+   * @param {object} [options={random: false}] - options for converting
+   * @param {boolean} options.random=false - using random for converting
+   */
   mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
   module.exports = mOcKiNgCaSe;
