@@ -18,6 +18,8 @@
       else return i % 2 ? s.toUpperCase() : s.toLowerCase()
     });
   }
+  
+  mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
   module.exports = mOcKiNgCaSe;
 })();
