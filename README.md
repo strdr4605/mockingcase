@@ -46,19 +46,31 @@ mOcKiNgCaSe('foo bar 42');
 mOcKiNgCaSe('42foo!bar');
 //=> '42fOo!bAr'
 
-mOcKiNgCaSe('Foo42!$ Bar');
-//=> 'fOo42!$ bAr'
-
-mOcKiNgCaSe('4Foo!$ B2ar');
-//=> '4FoO!$ B2Ar'
+mOcKiNgCaSe.log('foo bar');
+// console.log('fOo bAr');
 ```
 
 ## API
+<a name="mOcKiNgCaSe"></a>
 
 ### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
 This function receives a string input and converts it to mOcKiNgCaSe.
 
+**Kind**: global function  
 **Returns**: <code>string</code> - string in mOcKiNgCaSe
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| input | <code>string</code> |  | string to be converted |
+| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
+| options.random | <code>boolean</code> | <code>false</code> | using random for converting |
+
+<a name="mOcKiNgCaSe.log"></a>
+
+### mOcKiNgCaSe.log(input, [options])
+This function receives a string input and outputs a message to the console in mOcKiNgCaSe.
+
+**Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

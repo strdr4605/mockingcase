@@ -25,15 +25,13 @@ describe('mockingcase', () => {
   test('log should send converted string to console.log', () => {
     const input = 'hello world';
     const expectedOutput = mOcKiNgCaSe(input);
-    var consoleOutput = null;
-  
+    let consoleOutput = null;
+
     console.log = jest.fn(output => {
       consoleOutput = output;
     });
     mOcKiNgCaSe.log(input);
-    
+
     expect(consoleOutput).toEqual(expectedOutput);
   });
 });
-
-
