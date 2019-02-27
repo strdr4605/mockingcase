@@ -29,15 +29,12 @@
     });
   }
 
-<<<<<<< HEAD
-=======
   /**
    * This function receives a string input and outputs a message to the console in mOcKiNgCaSe.
    * @param {string} input - string to be converted
    * @param {object} [options={random: false}] - options for converting
    * @param {boolean} options.random=false - using random for converting
    */
->>>>>>> da5fb1890c8e49565b4721bb2ed615998076e0e8
   mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
   module.exports = mOcKiNgCaSe;

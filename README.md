@@ -46,19 +46,11 @@ mOcKiNgCaSe('foo bar 42');
 mOcKiNgCaSe('42foo!bar');
 //=> '42fOo!bAr'
 
-<<<<<<< HEAD
-mOcKiNgCaSe('Foo42!$ Bar');
-//=> 'fOo42!$ bAr'
-
-mOcKiNgCaSe('4Foo!$ B2ar');
-//=> '4FoO!$ B2Ar'
-
-mOcKiNgCaSe(['foo','bar']):
-//=> 'fOoBaR'
-=======
 mOcKiNgCaSe.log('foo bar');
 // console.log('fOo bAr');
->>>>>>> da5fb1890c8e49565b4721bb2ed615998076e0e8
+
+mOcKiNgCaSe.log(['foo','bar']);
+//=> 'fOoBaR';
 ```
 
 ## API

@@ -30,6 +30,7 @@ describe('mockingcase', () => {
     console.log = jest.fn(output => {
       consoleOutput = output;
     });
+
     mOcKiNgCaSe.log(input);
 
     expect(consoleOutput).toEqual(expectedOutput);
