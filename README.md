@@ -51,6 +51,9 @@ mOcKiNgCaSe('Foo42!$ Bar');
 
 mOcKiNgCaSe('4Foo!$ B2ar');
 //=> '4FoO!$ B2Ar'
+
+mOcKiNgCaSe(['foo','bar']):
+//=> 'fOoBaR'
 ```
 
 ## API
