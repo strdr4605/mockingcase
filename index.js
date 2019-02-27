@@ -39,8 +39,6 @@
 
   module.exports = mOcKiNgCaSe;
 })();
-<<<<<<< HEAD
-
 // This function check if the input is an array of string
 
 function isAnArrayOfString(input) {
@@ -49,5 +47,3 @@ function isAnArrayOfString(input) {
   });
 
 }
-=======
->>>>>>> da5fb1890c8e49565b4721bb2ed615998076e0e8
