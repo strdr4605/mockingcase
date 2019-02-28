@@ -3,7 +3,7 @@
 
   /**
    * This function receives a string input and converts it to mOcKiNgCaSe.
-   * @param {string} input - string to be converted
+   * @param {(string|string[])} input - string to be converted
    * @param {object} [options={random: false}] - options for converting
    * @param {boolean} options.random=false - using random for converting
    * @returns {string} string in mOcKiNgCaSe
@@ -37,13 +37,11 @@
    */
   mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
+  // This function check if the input is an array of string
+
+  const isAnArrayOfString = (inputArray) => inputArray.every(el => typeof el === 'string');
+
+
   module.exports = mOcKiNgCaSe;
 })();
 // This function check if the input is an array of string
-
-function isAnArrayOfString(input) {
-  return input.every(function(currentValue) {
-    return typeof currentValue === 'string'
-  });
-
-}
