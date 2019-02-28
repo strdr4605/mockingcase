@@ -6,6 +6,6 @@ declare module 'mockingcase' {
   export = mockingcase;
   function mockingcase(input: string|Array<string>, options?: { random?: boolean }): string;
   namespace mockingcase {
-    export function log(input: string, options?: { random?: boolean }): void;
+    export function log(input: string|Array<string>, options?: { random?: boolean }): void;
   }
 }
