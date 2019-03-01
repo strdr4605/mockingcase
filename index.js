@@ -3,7 +3,7 @@
 
   /**
    * This function receives a string input and converts it to mOcKiNgCaSe.
-   * @param {(string|string[])} input - string to be converted
+   * @param {(string | string[])} input - string or array of string to be converted
    * @param {object} [options={random: false}] - options for converting
    * @param {boolean} options.random=false - using random for converting
    * @returns {string} string in mOcKiNgCaSe
@@ -13,15 +13,7 @@
       random: false
     }, options);
 
-    if (Array.isArray(input)) {
-      isAnArrayOfString(input) ?
-        input = input.join('') :
-        function() {
-          throw "If the input is an array, it must be an array of strings.";
-        }()
-    };
-
-
+    if(isArrayOfStrings(input)) input = input.join('');
 
     return input.replace(/./g, (s, i) => {
       if (options.random) return Math.round(Math.random()) ? s.toUpperCase() : s.toLowerCase()
@@ -37,11 +29,15 @@
    */
   mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
-  // This function check if the input is an array of string
-
-  const isAnArrayOfString = (inputArray) => inputArray.every(el => typeof el === 'string');
-
+  const isArrayOfStrings = (input) => {
+    if (Array.isArray(input)) {
+      input.forEach((value, i) => {
+        if (typeof value !== 'string') throw TypeError(`Expected array of strings but got type '${typeof value}' at  index ${i}`);
+      });
+      // If no error found returns true
+      return true;
+    }
+  }
 
   module.exports = mOcKiNgCaSe;
 })();
-// This function check if the input is an array of string

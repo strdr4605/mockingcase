@@ -30,15 +30,8 @@ describe('mockingcase', () => {
     console.log = jest.fn(output => {
       consoleOutput = output;
     });
-
     mOcKiNgCaSe.log(input);
 
     expect(consoleOutput).toEqual(expectedOutput);
-  });
-
-  test('If input is an array of string, it should return the mOcKiNgCaSe version of the string formed by the array\'s elements.', () => {
-    const input = ['foo', 'bar'];
-    const expectedOutput = 'fOoBaR';
-    expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
   });
 });

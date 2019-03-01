@@ -46,11 +46,11 @@ mOcKiNgCaSe('foo bar 42');
 mOcKiNgCaSe('42foo!bar');
 //=> '42fOo!bAr'
 
+mOcKiNgCaSe(['foo','bar']);
+//=> 'fOoBaR';
+
 mOcKiNgCaSe.log('foo bar');
 // console.log('fOo bAr');
-
-mOcKiNgCaSe.log(['foo','bar']);
-//=> 'fOoBaR';
 ```
 
 ## API
