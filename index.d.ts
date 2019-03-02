@@ -1,4 +1,4 @@
-// Type definitions for mockingcase 1.2
+// Type definitions for mockingcase 1.3
 // Project: https://github.com/strdr4605/mockingcase
 // Definitions by: Dragoș Străinu https://github.com/strdr4605
 
