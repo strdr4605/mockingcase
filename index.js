@@ -1,9 +1,9 @@
-(function () {
+(function() {
   'use strict';
 
   /**
    * This function receives a string input and converts it to mOcKiNgCaSe.
-   * @param {string} input - string to be converted
+   * @param {(string | string[])} input - string or array of string to be converted
    * @param {object} [options={random: false}] - options for converting
    * @param {boolean} options.random=false - using random for converting
    * @returns {string} string in mOcKiNgCaSe
@@ -12,6 +12,8 @@
     options = Object.assign({
       random: false
     }, options);
+
+    if(isArrayOfStrings(input)) input = input.join('');
 
     return input.replace(/./g, (s, i) => {
       if (options.random) return Math.round(Math.random()) ? s.toUpperCase() : s.toLowerCase()
@@ -26,6 +28,16 @@
    * @param {boolean} options.random=false - using random for converting
    */
   mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
+
+  const isArrayOfStrings = (input) => {
+    if (Array.isArray(input)) {
+      input.forEach((value, i) => {
+        if (typeof value !== 'string') throw TypeError(`Expected array of strings but got type '${typeof value}' at  index ${i}`);
+      });
+      // If no error found returns true
+      return true;
+    }
+  }
 
   module.exports = mOcKiNgCaSe;
 })();
