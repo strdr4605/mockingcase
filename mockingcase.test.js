@@ -24,6 +24,14 @@ describe('mockingcase', () => {
     });
   });
 
+  describe('empty input', () => {
+    test("If the input is left blank, an error should be thrown", () => {
+      const input = "";
+      const expectedOutput = undefined;
+      expect(() => mOcKiNgCaSe(input).toThrow());
+    })
+  })
+
   describe('input as array', () => {
     test('If input is an array of strings, it should return the mOcKiNgCaSe version of the string formed by the array elements.', () => {
       const input = ['foo', 'bar'];

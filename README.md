@@ -49,6 +49,9 @@ mOcKiNgCaSe('42foo!bar');
 mOcKiNgCaSe(['foo','bar']);
 //=> 'fOoBaR';
 
+mOcKiNgCaSe(undefined);
+//=> Error "An input is required
+
 mOcKiNgCaSe.log('foo bar');
 // console.log('fOo bAr');
 ```
