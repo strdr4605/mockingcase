@@ -7,10 +7,15 @@
  * @param {boolean} options.random=false - using random for converting
  * @returns {string} string in mOcKiNgCaSe
  */
-function mOcKiNgCaSe(input, options) {
+function mOcKiNgCaSe(input = "", options) {
   options = Object.assign({
     random: false,
   }, options);
+
+  //First, check to see that an input is recieved, and throw error if not
+  if(input === ""){
+    throw new Error("An input is required")
+  }
 
   if (isArrayOfStrings(input)) input = input.join('');
 
