@@ -43,4 +43,21 @@ const isArrayOfStrings = (input) => {
   }
 }
 
+/**
+ * Creates `String.prototype.toMockingCase()`.
+ * @return mOcKiNgCaSe
+ */
+mOcKiNgCaSe.overrideString = () => {
+
+  /**
+    * Converts this string to mOcKiNgCaSe.
+    * @see mOcKiNgCaSe
+    */
+   String.prototype.toMockingCase = function() {
+     return mOcKiNgCaSe(this);
+   };
+
+   return mOcKiNgCaSe;
+}
+
 module.exports = mOcKiNgCaSe;
