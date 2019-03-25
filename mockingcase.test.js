@@ -1,4 +1,4 @@
-const mOcKiNgCaSe = require('./index');
+const mOcKiNgCaSe = require('./index').overrideString();
 
 describe('mockingcase', () => {
   describe('input as string', () => {
@@ -29,8 +29,8 @@ describe('mockingcase', () => {
       const input = "";
       const expectedOutput = undefined;
       expect(() => mOcKiNgCaSe(input).toThrow());
-    })
-  })
+    });
+  });
 
   describe('input as array', () => {
     test('If input is an array of strings, it should return the mOcKiNgCaSe version of the string formed by the array elements.', () => {
@@ -59,4 +59,19 @@ describe('mockingcase', () => {
       expect(consoleOutput).toEqual(expectedOutput);
     });
   });
+
+  describe('toMockingCase', () => {
+      test('Properly converts a string to mocking case', () => {
+          const input = 'hello world';
+          const expectedOutput = mOcKiNgCaSe(input);
+          expect(input.toMockingCase()).toEqual(expectedOutput);
+      });
+
+      test("If the string is left blank, an error should be thrown", () => {
+        const input = "";
+        const expectedOutput = undefined;
+        expect(() => input.toMockingCase().toThrow());
+      })
+  });
+
 });

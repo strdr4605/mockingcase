@@ -54,6 +54,12 @@ mOcKiNgCaSe(undefined);
 
 mOcKiNgCaSe.log('foo bar');
 // console.log('fOo bAr');
+
+// Optionally create String.prototype.toMockingCase
+mOcKiNgCaSe.overrideString();
+
+'foo_bar'.toMockingCase();
+//=> 'fOo_bAr'
 ```
 
 ## API
@@ -71,6 +77,31 @@ This function receives a string input and converts it to mOcKiNgCaSe.
 | [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
 
+<hr>
+
+<a name="mOcKiNgCaSe.overrideString"></a>
+
+### mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>
+Creates `String.prototype.toMockingCase()`.
+
+**Kind**: global function  
+**Returns**: <code>mOcKiNgCaSe</code> - The mOcKiNgCaSe module.  
+**See**: <code>toMockingCase</code>
+
+<hr>
+
+<a name="String.prototype.toMockingCase"></a>
+
+### String.prototype.toMockingCase() ⇒ <code>string</code>
+Converts `this` string to mOcKiNgCaSe.
+
+**NOTE**: this function is created by invoking `mOcKiNgCaSe.overrideString()`.
+
+**Kind**: prototype  
+**Returns**: <code>string</code> - local string in mOcKiNgCaSe
+
+<hr>
+
 <a name="mOcKiNgCaSe.log"></a>
 
 ### mOcKiNgCaSe.log(input, [options])
@@ -83,3 +114,5 @@ This function receives a string input and outputs a message to the console in mO
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | string or array of string to be converted |
 | [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
+
+<a name="mOcKiNgCaSe"></a>
