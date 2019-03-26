@@ -4,7 +4,7 @@
  * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input String(s) to be converted.
  * @param {object} [options={random: false}] Conversion options.
- * @param {boolean} options.random=false - using random for converting
+ * @param {boolean} options.random=false - If case conversion should be randomized.
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input = "", options) {
