@@ -13,14 +13,18 @@ describe('mockingcase', () => {
       const expectedOutput = '1234567890hElLo wOrLd!@#$%^&*()_+[]{},./<>?`~\\';
       expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
     });
+  });
 
-    test('Returned string should have same length as input string', () => {
-      const input = 'hello world';
-      const options = {
-        random: true
-      };
-      expect(mOcKiNgCaSe(input)).toHaveLength(input.length);
-      expect(mOcKiNgCaSe(input, options)).toHaveLength(input.length);
+  describe(`"Random" conversion option enabled`, () => {
+    const input = 'hello world';
+    const options = {
+      random: true
+    };
+    const convertedInput = mOcKiNgCaSe(input);
+    const randomConvertedInput = mOcKiNgCaSe(input, options);
+
+    test('Returned string should equal input string when ignoring case', () => {
+      expect(convertedInput.toLowerCase()).toStrictEqual(randomConvertedInput.toLowerCase());
     });
   });
 
@@ -41,7 +45,7 @@ describe('mockingcase', () => {
 
     test('If input is an array but all elements aren\'t strings, it should throw an error.', () => {
       const input = ['foo', '1', 1];
-      expect(() => mOcKiNgCaSe(input)).toThrow(`Expected array of strings but got type '${typeof input[2]}' at  index ${2}`);
+      expect(() => mOcKiNgCaSe(input)).toThrow();
     });
   });
 
@@ -69,9 +73,8 @@ describe('mockingcase', () => {
 
     test("If the string is left blank, an error should be thrown", () => {
       const input = "";
-      const expectedOutput = undefined;
       expect(() => input.toMockingCase().toThrow());
-    })
+    });
   });
 
 });
