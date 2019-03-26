@@ -61,17 +61,17 @@ describe('mockingcase', () => {
   });
 
   describe('toMockingCase', () => {
-      test('Properly converts a string to mocking case', () => {
-          const input = 'hello world';
-          const expectedOutput = mOcKiNgCaSe(input);
-          expect(input.toMockingCase()).toEqual(expectedOutput);
-      });
+    test('Properly converts a string to mocking case', () => {
+      const input = 'hello world';
+      const expectedOutput = mOcKiNgCaSe(input);
+      expect(input.toMockingCase()).toEqual(expectedOutput);
+    });
 
-      test("If the string is left blank, an error should be thrown", () => {
-        const input = "";
-        const expectedOutput = undefined;
-        expect(() => input.toMockingCase().toThrow());
-      })
+    test("If the string is left blank, an error should be thrown", () => {
+      const input = "";
+      const expectedOutput = undefined;
+      expect(() => input.toMockingCase().toThrow());
+    })
   });
 
 });
