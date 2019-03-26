@@ -3,7 +3,7 @@
 /**
  * This function receives a string input and converts it to mOcKiNgCaSe.
  * @param {(string | string[])} input - string or array of strings to be converted
- * @param {object} [options={random: false}] - options for converting
+ * @param {object} [options={random: false, onlyLetters: false}] - options for converting
  * @param {boolean} options.random=false - using random for converting
  * @param {boolean} options.onlyLetters=false - using only letters of the string
  * @returns {string} string in mOcKiNgCaSe
@@ -26,7 +26,7 @@ function mOcKiNgCaSe(input = "", options) {
 
   //Checks the onlyLetters option, and remove numbers if there are any
   if (options.onlyLetters) {
-    input = input.replace(/[^a-zA-Z]/g, "");
+    input = input.replace(/[^a-zA-Z\s]/g, "");
   }
 
   return input.replace(/./g, (s, i) => {
