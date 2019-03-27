@@ -34,6 +34,12 @@ mOcKiNgCaSe('aa', {random: true});
 //=> 'Aa'
 //=> 'AA'
 
+mOcKiNgCaSe('aa123', {onlyLetters: true});
+//=> 'aA'
+
+mOcKiNgCaSe('a13%$a', {onlyLetters: true});
+//=> 'aA'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
@@ -74,8 +80,9 @@ This function receives a string input and converts it to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | string or array of strings to be converted |
-| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | removes all non letters characters before converting |
 
 <hr>
 
@@ -112,7 +119,7 @@ This function receives a string input and outputs a message to the console in mO
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | string or array of string to be converted |
-| [options] | <code>object</code> | <code>{random: false}</code> | options for converting |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | options for converting |
 | options.random | <code>boolean</code> | <code>false</code> | using random for converting |
-
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | removes all non letters characters before converting |
 <a name="mOcKiNgCaSe"></a>
