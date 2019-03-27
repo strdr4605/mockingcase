@@ -34,6 +34,12 @@ mOcKiNgCaSe('aa', {random: true});
 //=> 'Aa'
 //=> 'AA'
 
+mOcKiNgCaSe('aa123', {onlyLetters: true});
+//=> 'aA'
+
+mOcKiNgCaSe('a13%$a', {onlyLetters: true});
+//=> 'aA'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
@@ -74,8 +80,9 @@ Converts the input string(s) to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(s) to be converted |
-| [options] | <code>object</code> | <code>{random: false}</code> | Conversion options |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 
 <hr>
 
@@ -112,7 +119,8 @@ Outputs a message to the console in mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted |
-| [options] | <code>object</code> | <code>{random: false}</code> | Conversion options |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 
 <a name="mOcKiNgCaSe"></a>

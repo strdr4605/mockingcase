@@ -77,4 +77,25 @@ describe('mockingcase', () => {
     });
   });
 
+  describe('input with non-letter characters', () => {
+    test('string with number characters', () => {
+      const input = 'hello world123';
+      const options = {
+        onlyLetters: true
+      };
+      const expectedOutput = 'hElLo wOrLd';
+      expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
+    });
+    
+    test('string with symbols', () => {
+      const input = 'hello$%@# %world@';
+      const options = {
+        onlyLetters: true
+      };
+      const expectedOutput = 'hElLo wOrLd';
+      expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
+    });
+  }); 
+
+
 });
