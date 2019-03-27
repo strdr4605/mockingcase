@@ -72,17 +72,17 @@ mOcKiNgCaSe.overrideString();
 <a name="mOcKiNgCaSe"></a>
 
 ### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
-This function receives a string input and converts it to mOcKiNgCaSe.
+Converts the input string(s) to mOcKiNgCaSe.
 
 **Kind**: global function  
 **Returns**: <code>string</code> - string in mOcKiNgCaSe
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | string or array of strings to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | options for converting |
-| options.random | <code>boolean</code> | <code>false</code> | using random for converting |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | removes all non letters characters before converting |
+| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(s) to be converted |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}}</code> | Conversion options |
+| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 
 <hr>
 
@@ -112,14 +112,15 @@ Converts `this` string to mOcKiNgCaSe.
 <a name="mOcKiNgCaSe.log"></a>
 
 ### mOcKiNgCaSe.log(input, [options])
-This function receives a string input and outputs a message to the console in mOcKiNgCaSe.
+Outputs a message to the console in mOcKiNgCaSe.
 
 **Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | string or array of string to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | options for converting |
-| options.random | <code>boolean</code> | <code>false</code> | using random for converting |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | removes all non letters characters before converting |
+| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | Conversion options |
+| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+
 <a name="mOcKiNgCaSe"></a>

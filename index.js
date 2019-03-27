@@ -1,11 +1,11 @@
 "use strict";
 
 /**
- * This function receives a string input and converts it to mOcKiNgCaSe.
- * @param {(string | string[])} input - string or array of strings to be converted
- * @param {object} [options={random: false, onlyLetters: false}] - options for converting
- * @param {boolean} options.random=false - using random for converting
- * @param {boolean} options.onlyLetters=false - using only letters of the string
+ * Converts the input string(s) to mOcKiNgCaSe.
+ * @param {(string | string[])} input String(s) to be converted.
+ * @param {object} [options={random: false,  onlyLetters: false}] Conversion options.
+ * @param {boolean} options.random=false - If case conversion should be randomized.
+  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input = "", options) {
@@ -37,10 +37,10 @@ function mOcKiNgCaSe(input = "", options) {
 }
 
 /**
- * This function receives a string input and outputs a message to the console in mOcKiNgCaSe.
- * @param {(string | string[])} input - string or array of string to be converted
- * @param {object} [options={random: false}] - options for converting
- * @param {boolean} options.random=false - using random for converting
+ * Outputs a message to the console in mOcKiNgCaSe.
+ * @param {(string | string[])} input String(S) to be converted.
+ * @param {object} [options={random: false}] Options for converting.
+ * @param {boolean} options.random=false 
  */
 mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
@@ -52,7 +52,7 @@ const isArrayOfStrings = input => {
           `Expected array of strings but got type '${typeof value}' at  index ${i}`
         );
     });
-    // If no error found returns true
+    // Returns true if no error was found.
     return true;
   }
 };
@@ -67,11 +67,11 @@ mOcKiNgCaSe.overrideString = () => {
     * Converts this string to mOcKiNgCaSe.
     * @see mOcKiNgCaSe
     */
-   String.prototype.toMockingCase = function() {
-     return mOcKiNgCaSe(this);
-   };
+  String.prototype.toMockingCase = function () {
+    return mOcKiNgCaSe(this);
+  };
 
-   return mOcKiNgCaSe;
+  return mOcKiNgCaSe;
 }
 
 module.exports = mOcKiNgCaSe;
