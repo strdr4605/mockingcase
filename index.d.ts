@@ -6,7 +6,9 @@
 declare module 'mockingcase' {
 
   interface Options {
-    random?: boolean
+    random?: boolean,
+    onlyLetters?: boolean,
+    firstUpper?: boolean
   }
 
   export = mockingcase;
