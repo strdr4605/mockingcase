@@ -56,7 +56,10 @@ function mOcKiNgCaSe(input = '', options) {
  * Outputs a message to the console in mOcKiNgCaSe.
  * @param {(string | string[])} input String(S) to be converted.
  * @param {object} [options={random: false}] Options for converting.
- * @param {boolean} options.random=false 
+ * @param {boolean} options.random=false - If case conversion should be randomized.
+ * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * When combined with `options.random`, the first letter of the random string will be capitalized.
  */
 mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
@@ -104,7 +107,7 @@ function randomCase(input) {
 }
 
 /**
- * 
+ * Converts the string.
  * @param {string} input The string to convert.
  * @param {function(string, number)} shouldLetterBeUpperCase A function given a character and its index,
  * which returns if the given letter should be set to uppercase. If false, the letter will be lowercase.
