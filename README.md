@@ -40,6 +40,15 @@ mOcKiNgCaSe('aa123', {onlyLetters: true});
 mOcKiNgCaSe('a13%$a', {onlyLetters: true});
 //=> 'aA'
 
+mOcKiNgCaSe('foo bar', {firstUpper: true});
+//=> 'FoO BaR'
+
+mOcKiNgCaSe('foo', {firstUpper: true, random: true});
+//=> 'Foo'
+//=> 'FOo'
+//=> 'FoO'
+//=> 'FOO'
+
 mOcKiNgCaSe('foo_bar');
 //=> 'fOo_bAr'
 
@@ -79,10 +88,11 @@ Converts the input string(s) to mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(s) to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}}</code> | Conversion options |
+| input | <code>string</code> \| <code>string[]</code> |  | String(s) to be converted |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
 <hr>
 
@@ -118,9 +128,10 @@ Outputs a message to the console in mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false}</code> | Conversion options |
+| input | <code>string</code> \| <code>string[]</code> |  | String(S) to be converted |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
 <a name="mOcKiNgCaSe"></a>

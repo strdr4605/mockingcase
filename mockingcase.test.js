@@ -20,11 +20,36 @@ describe('mockingcase', () => {
     const options = {
       random: true
     };
-    const convertedInput = mOcKiNgCaSe(input);
-    const randomConvertedInput = mOcKiNgCaSe(input, options);
+    const normalOutput = mOcKiNgCaSe(input);
+    const randomlyConvertedOutput = mOcKiNgCaSe(input, options);
 
     test('Returned string should equal input string when ignoring case', () => {
-      expect(convertedInput.toLowerCase()).toStrictEqual(randomConvertedInput.toLowerCase());
+      expect(normalOutput.toLowerCase()).toStrictEqual(randomlyConvertedOutput.toLowerCase());
+    });
+
+    test(`"First upper" option will capitalize the first letter`, () => {
+      const options = {
+        random: true,
+        firstUpper: true
+      };
+      // Generate 100 random strings and ensure all have an uppercase first letter.
+      for (let i = 0; i < 100; i++) {
+        const output = mOcKiNgCaSe(input, options);
+        expect(output[0]).toStrictEqual(output[0].toUpperCase());
+      }
+    });
+  });
+
+  describe(`"First upper" option enabled`, () => {
+    const input = 'hello world';
+    const options = {
+      firstUpper: true
+    };
+    const output = mOcKiNgCaSe(input, options);
+    const expectedOutput = 'HeLlO WoRlD';
+
+    test('Should convert every other letter to uppercase, starting with the first letter', () => {
+      expect(output).toStrictEqual(expectedOutput);
     });
   });
 
@@ -86,7 +111,7 @@ describe('mockingcase', () => {
       const expectedOutput = 'hElLo wOrLd';
       expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
     });
-    
+
     test('string with symbols', () => {
       const input = 'hello$%@# %world@';
       const options = {
@@ -95,7 +120,7 @@ describe('mockingcase', () => {
       const expectedOutput = 'hElLo wOrLd';
       expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
     });
-  }); 
+  });
 
 
 });
