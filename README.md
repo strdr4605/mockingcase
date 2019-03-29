@@ -135,3 +135,7 @@ Outputs a message to the console in mOcKiNgCaSe.
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
 <a name="mOcKiNgCaSe"></a>
+
+<hr>
+
+**See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**
