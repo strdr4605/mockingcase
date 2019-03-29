@@ -89,7 +89,7 @@ Converts the input string(s) to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>string[]</code> |  | String(s) to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}}</code> | Conversion options |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
