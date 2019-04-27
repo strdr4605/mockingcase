@@ -81,6 +81,18 @@ mOcKiNgCaSe.overrideString = () => {
 }
 
 /**
+ * Changes all console log output to mOcKiNgCaSe.
+ *
+ */
+mOcKiNgCaSe.overrideConsole = (options = {}) => {
+  let original = console.log;
+  console.log = function (message) {
+    original(mOcKiNgCaSe(message, options));
+  }
+}
+
+
+/**
  * @param {string|string[]} input The user-given input.
  * @return If the given input is an array of strings.
  */
@@ -117,6 +129,29 @@ function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => {
     return shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase();
   });
+}
+
+function overrideConsole(){
+  let console = window.console;
+  if (!console) return;
+  function intercept(method){
+    let original = console[method];
+    console[method] = function(){
+      // do sneaky stuff
+      if (original.apply){
+        // Do this for normal browsers
+        original.apply(console, arguments);
+      }else{
+        // Do this for IE
+        var message = Array.prototype.slice.apply(arguments).join(' ');
+        original(message);
+      }
+    }
+  }
+  var methods = ['log', 'warn', 'error'];
+  for (var i = 0; i < methods.length; i++){
+    intercept(methods[i]);
+  }
 }
 
 module.exports = mOcKiNgCaSe;

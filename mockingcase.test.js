@@ -87,6 +87,19 @@ describe('mockingcase', () => {
 
       expect(consoleOutput).toEqual(expectedOutput);
     });
+    test('console.log output should be converted to mocking case', () => {
+      const input = 'hello world';
+      const expectedOutput = mOcKiNgCaSe(input);
+      let consoleOutput = null;
+
+      console.log = jest.fn(output => {
+        consoleOutput = output;
+      });
+      mOcKiNgCaSe.overrideConsole();
+      console.log(input);
+
+      expect(consoleOutput).toEqual(expectedOutput);
+    });
   });
 
   describe('toMockingCase', () => {

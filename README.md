@@ -138,4 +138,11 @@ Outputs a message to the console in mOcKiNgCaSe.
 
 <hr>
 
+### mOcKiNgCaSe.overrideConsole([options])
+Formats all console.log outputs into mOcKiNgCaSe
+
+**Kind**: global function  
+**Returns**: Nothing  
+See `mOcKiNgCaSe(input, [options]) ⇒ string` for `[options]`
+
 **See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**
