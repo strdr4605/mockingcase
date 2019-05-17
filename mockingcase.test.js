@@ -96,6 +96,15 @@ describe('mockingcase', () => {
       expect(input.toMockingCase()).toEqual(expectedOutput);
     });
 
+    test("Does not ignore options", () => {
+      const input = "hello world";
+      const options = {
+        firstUpper: true,
+      };
+      const expectedOutput = mOcKiNgCaSe(input, options);
+      expect(input.toMockingCase(options)).toMatch(expectedOutput);
+    });
+
     test("If the string is left blank, an error should be thrown", () => {
       const input = "";
       expect(() => input.toMockingCase().toThrow());
