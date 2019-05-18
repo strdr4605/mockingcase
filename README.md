@@ -75,6 +75,9 @@ mOcKiNgCaSe.overrideString();
 
 'foo_bar'.toMockingCase();
 //=> 'fOo_bAr'
+
+'foo_bar'.toMockingCase({firstUpper: true});
+//=> 'FoO_BaR'
 ```
 
 ## API
@@ -109,13 +112,20 @@ Creates `String.prototype.toMockingCase()`.
 
 <a name="String.prototype.toMockingCase"></a>
 
-### String.prototype.toMockingCase() ⇒ <code>string</code>
+### String.prototype.toMockingCase([options]) ⇒ <code>string</code>
 Converts `this` string to mOcKiNgCaSe.
 
 **NOTE**: this function is created by invoking `mOcKiNgCaSe.overrideString()`.
 
 **Kind**: prototype  
 **Returns**: <code>string</code> - local string in mOcKiNgCaSe
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
+| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
 <hr>
 
