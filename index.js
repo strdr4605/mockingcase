@@ -64,6 +64,21 @@ function mOcKiNgCaSe(input = '', options) {
 mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
 
 /**
+ * Outputs a mOcKiNgCaSe with default options.
+ * @param {object} [defaultOptions={random: false}] Options for converting.
+ * @param {boolean} defaultOptions.random=false - If case conversion should be randomized.
+ * @param {boolean} defaultOptions.onlyLetters=false - If non letters characters should be removed.
+ * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe
+ * @return mOcKiNgCaSe with default options
+ */
+mOcKiNgCaSe.config = (defaultOptions) => {
+    return (input = '', overridedDefaultOptions) => {
+      const options = overridedDefaultOptions || defaultOptions
+      return mOcKiNgCaSe(input, options)
+  }
+}
+
+/**
  * Creates `String.prototype.toMockingCase()`.
  * @return mOcKiNgCaSe
  */
