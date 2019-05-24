@@ -134,7 +134,7 @@ describe('mockingcase', () => {
   describe('default options when importing/requering package', () => {
     test('default options', () => {
       const mOcKiNgCaSe = require('./index').config({ onlyLetters: true });
-      const input = 'hello';
+      const input = 'hello123';
       const expectedOutput = 'hElLo';
       expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
     });
