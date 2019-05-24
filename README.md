@@ -34,6 +34,9 @@ mOcKiNgCaSe('aa', {random: true});
 //=> 'Aa'
 //=> 'AA'
 
+mOcKiNgCaSe('42foo!bar');
+//=> '42fOo!bAr'
+
 mOcKiNgCaSe('aa123', {onlyLetters: true});
 //=> 'aA'
 
@@ -49,23 +52,11 @@ mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'FoO'
 //=> 'FOO'
 
-mOcKiNgCaSe('foo_bar');
-//=> 'fOo_bAr'
-
-mOcKiNgCaSe('Foo-Bar');
-//=> 'fOo-bAr'
-
-mOcKiNgCaSe('foo bar 42');
-//=> 'fOo bAr 42'
-
-mOcKiNgCaSe('42foo!bar');
-//=> '42fOo!bAr'
-
 mOcKiNgCaSe(['foo','bar']);
 //=> 'fOoBaR';
 
 mOcKiNgCaSe(undefined);
-//=> Error "An input is required
+//=> Error "An input is required"
 
 mOcKiNgCaSe.log('foo bar');
 // console.log('fOo bAr');
@@ -78,6 +69,16 @@ mOcKiNgCaSe.overrideString();
 
 'foo_bar'.toMockingCase({firstUpper: true});
 //=> 'FoO_BaR'
+
+// Optionally create an initial config with default options
+const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
+// const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
+
+mOcKiNgCaSe('foo bar42');
+//=> 'FoO BaR'
+
+mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
+//=> 'fOo bAr42'
 ```
 
 ## API
@@ -86,7 +87,7 @@ mOcKiNgCaSe.overrideString();
 ### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
 Converts the input string(s) to mOcKiNgCaSe.
 
-**Kind**: global function  
+**Kind**: global function
 **Returns**: <code>string</code> - string in mOcKiNgCaSe
 
 | Param | Type | Default | Description |
@@ -104,9 +105,26 @@ Converts the input string(s) to mOcKiNgCaSe.
 ### mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>
 Creates `String.prototype.toMockingCase()`.
 
-**Kind**: global function  
-**Returns**: <code>mOcKiNgCaSe</code> - The mOcKiNgCaSe module.  
+**Kind**: global function
+**Returns**: <code>mOcKiNgCaSe</code> - The mOcKiNgCaSe module.
 **See**: <code>toMockingCase</code>
+
+<hr>
+
+<a name="mOcKiNgCaSe.config"></a>
+
+### mOcKiNgCaSe.config(defaultOptions) ⇒
+Outputs a mOcKiNgCaSe with default options.
+
+**Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
+**Returns**: mOcKiNgCaSe with default options
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| defaultOptions | <code>object</code> |  | Options for converting. |
+| defaultOptions.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized. |
+| defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed. |
+| defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe |
 
 <hr>
 
@@ -117,7 +135,7 @@ Converts `this` string to mOcKiNgCaSe.
 
 **NOTE**: this function is created by invoking `mOcKiNgCaSe.overrideString()`.
 
-**Kind**: prototype  
+**Kind**: prototype
 **Returns**: <code>string</code> - local string in mOcKiNgCaSe
 
 | Param | Type | Default | Description |

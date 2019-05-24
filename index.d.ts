@@ -1,5 +1,5 @@
 
-// Type definitions for mockingcase 1.3
+// Type definitions for mockingcase 1.8
 // Project: https://github.com/strdr4605/mockingcase
 // Definitions by: Dragoș Străinu https://github.com/strdr4605
 
@@ -17,9 +17,11 @@ declare module 'mockingcase' {
   namespace mockingcase {
     type MockingCase = (input: string, options?: Options) => string & {
       log: (input: string, options?: Options) => void,
+      config: (defaultOptions: Options) => MockingCase,
       overrideString: () => MockingCase
     }
     export function log(input: string | string[], options?: Options): void;
+    export function config(defaultOptions: Options): void;
     export function overrideString(): MockingCase;
   }
 }
