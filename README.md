@@ -121,10 +121,10 @@ Outputs a mOcKiNgCaSe with default options.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| defaultOptions | <code>object</code> |  | Options for converting. |
-| defaultOptions.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized. |
-| defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed. |
-| defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe |
+| defaultOptions | <code>object</code> |  | Options for converting |
+| defaultOptions.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
 <hr>
 
