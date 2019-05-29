@@ -53,7 +53,7 @@ mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'FOO'
 
 mOcKiNgCaSe(['foo','bar']);
-//=> 'fOoBaR';
+//=> 'fOoBaR'
 
 mOcKiNgCaSe(undefined);
 //=> Error "An input is required"
