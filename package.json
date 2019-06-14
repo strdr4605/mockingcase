@@ -13,7 +13,14 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "format": "prettier --write \"*.[jt]s\"",
+    "pre-commit": "npm run format && npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
   },
   "files": [
     "index.d.ts",
@@ -28,6 +35,8 @@
   "author": "Dragoș Străinu",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "husky": "^2.4.1",
+    "jest": "^23.6.0",
+    "prettier": "1.18.2"
   }
 }

@@ -10,7 +10,7 @@
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {string} string in mOcKiNgCaSe
  */
-function mOcKiNgCaSe(input = '', options) {
+function mOcKiNgCaSe(input = "", options) {
   options = Object.assign(
     {
       random: false,
@@ -22,17 +22,17 @@ function mOcKiNgCaSe(input = '', options) {
 
   // Combine strings first to form the input string.
   if (isArrayOfStrings(input)) {
-    input = input.join('');
+    input = input.join("");
   }
 
   // Throw an error if an input is not given.
-  if (input === '') {
-    throw new Error('An input is required');
+  if (input === "") {
+    throw Error("An input is required");
   }
 
   // Filter out any characters which are not alphabetic or whitespace.
   if (options.onlyLetters) {
-    input = input.replace(/[^a-zA-Z\s]/g, '');
+    input = input.replace(/[^a-zA-Z\s]/g, "");
   }
 
   if (options.random) {
@@ -49,7 +49,6 @@ function mOcKiNgCaSe(input = '', options) {
   } else {
     return convert(input, (str, i) => i % 2 === 1);
   }
-
 }
 
 /**
@@ -71,35 +70,34 @@ mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
  * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe
  * @return mOcKiNgCaSe with default options
  */
-mOcKiNgCaSe.config = (defaultOptions) => {
-    return (input = '', overridedDefaultOptions) => {
-      const options = overridedDefaultOptions || defaultOptions
-      return mOcKiNgCaSe(input, options)
-  }
-}
+mOcKiNgCaSe.config = defaultOptions => {
+  return (input = "", overridedDefaultOptions) => {
+    const options = overridedDefaultOptions || defaultOptions;
+    return mOcKiNgCaSe(input, options);
+  };
+};
 
 /**
  * Creates `String.prototype.toMockingCase()`.
  * @return mOcKiNgCaSe
  */
 mOcKiNgCaSe.overrideString = () => {
-
   /**
-    * Converts this string to mOcKiNgCaSe.
-    * @param {object} [options={random: false}] Options for converting.
-    * @param {boolean} options.random=false - If case conversion should be randomized.
-    * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
-    * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
-    * When combined with `options.random`, the first letter of the random string will be capitalized.
-    * @returns {string} string in mOcKiNgCaSe
-    * @see mOcKiNgCaSe
-    */
-  String.prototype.toMockingCase = function (options) {
+   * Converts this string to mOcKiNgCaSe.
+   * @param {object} [options={random: false}] Options for converting.
+   * @param {boolean} options.random=false - If case conversion should be randomized.
+   * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
+   * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+   * When combined with `options.random`, the first letter of the random string will be capitalized.
+   * @returns {string} string in mOcKiNgCaSe
+   * @see mOcKiNgCaSe
+   */
+  String.prototype.toMockingCase = function(options) {
     return mOcKiNgCaSe(this, options);
   };
 
   return mOcKiNgCaSe;
-}
+};
 
 /**
  * @param {string|string[]} input The user-given input.
@@ -111,8 +109,10 @@ function isArrayOfStrings(input) {
   }
 
   input.forEach((value, i) => {
-    if (typeof value !== 'string') {
-      throw TypeError(`Expected array of strings but got type '${typeof value}' at index ${i}`);
+    if (typeof value !== "string") {
+      throw TypeError(
+        `Expected array of strings but got type '${typeof value}' at index ${i}`
+      );
     }
   });
 
@@ -136,7 +136,9 @@ function randomCase(input) {
  */
 function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => {
-    return shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase();
+    return shouldLetterBeUpperCase(str, i)
+      ? str.toUpperCase()
+      : str.toLowerCase();
   });
 }
 
