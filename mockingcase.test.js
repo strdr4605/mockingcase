@@ -90,8 +90,8 @@ describe("mockingcase", () => {
       mOcKiNgCaSe.log(input);
       expect(consoleOutput).toEqual(expectedOutput);
     });
-    test('Our console.log output should now display in mOcKiNgCaSe', () => {
-      const input = 'hello world';
+    test("Our console.log output should now display in mOcKiNgCaSe", () => {
+      const input = "hello world";
       const expectedOutput = mOcKiNgCaSe(input);
       let consoleOutput = null;
 

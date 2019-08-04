@@ -86,11 +86,10 @@ mOcKiNgCaSe.config = defaultOptions => {
 
 mOcKiNgCaSe.consoleOverride = (options = {}) => {
   const original = console.log;
-   console.log = function (message) {
+  console.log = function(message) {
     original(mOcKiNgCaSe(message, options));
-  }
-}
-
+  };
+};
 
 mOcKiNgCaSe.overrideString = () => {
   /**
@@ -130,24 +129,24 @@ function isArrayOfStrings(input) {
   return true;
 }
 
-function consoleOverride(){
+function consoleOverride() {
   let consoleWindow = window.consoleWindow;
   if (!consoleWindow) return;
-  function intercept(method){
+  function intercept(method) {
     let original = consoleWindow[method];
-    consoleWindow[method] = function(){
-      if (original.apply){
+    consoleWindow[method] = function() {
+      if (original.apply) {
         // Every non-IE browser
         original.apply(consoleWindow, args);
-      }else{
+      } else {
         // This is for IE
-        var message = Array.prototype.slice.apply(args).join(' ');
+        var message = Array.prototype.slice.apply(args).join(" ");
         original(message);
       }
-    }
+    };
   }
-  var threeMethods = ['log', 'warn', 'error'];
-  for (var i = 0; i < threeMethods.length; i++){
+  var threeMethods = ["log", "warn", "error"];
+  for (var i = 0; i < threeMethods.length; i++) {
     intercept(threeMethods[i]);
   }
 }
