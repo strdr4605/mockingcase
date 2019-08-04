@@ -88,7 +88,18 @@ describe("mockingcase", () => {
         consoleOutput = output;
       });
       mOcKiNgCaSe.log(input);
+      expect(consoleOutput).toEqual(expectedOutput);
+    });
+    test('Our console.log output should now display in mOcKiNgCaSe', () => {
+      const input = 'hello world';
+      const expectedOutput = mOcKiNgCaSe(input);
+      let consoleOutput = null;
 
+      console.log = jest.fn(output => {
+        consoleOutput = output;
+      });
+      mOcKiNgCaSe.consoleOverride();
+      console.log(input);
       expect(consoleOutput).toEqual(expectedOutput);
     });
   });

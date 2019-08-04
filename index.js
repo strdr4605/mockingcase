@@ -81,6 +81,17 @@ mOcKiNgCaSe.config = defaultOptions => {
  * Creates `String.prototype.toMockingCase()`.
  * @return mOcKiNgCaSe
  */
+
+// Changes all console log output to mOcKiNgCaSe.
+
+mOcKiNgCaSe.consoleOverride = (options = {}) => {
+  const original = console.log;
+   console.log = function (message) {
+    original(mOcKiNgCaSe(message, options));
+  }
+}
+
+
 mOcKiNgCaSe.overrideString = () => {
   /**
    * Converts this string to mOcKiNgCaSe.
@@ -119,6 +130,27 @@ function isArrayOfStrings(input) {
   return true;
 }
 
+function consoleOverride(){
+  let consoleWindow = window.consoleWindow;
+  if (!consoleWindow) return;
+  function intercept(method){
+    let original = consoleWindow[method];
+    consoleWindow[method] = function(){
+      if (original.apply){
+        // Every non-IE browser
+        original.apply(consoleWindow, args);
+      }else{
+        // This is for IE
+        var message = Array.prototype.slice.apply(args).join(' ');
+        original(message);
+      }
+    }
+  }
+  var threeMethods = ['log', 'warn', 'error'];
+  for (var i = 0; i < threeMethods.length; i++){
+    intercept(threeMethods[i]);
+  }
+}
 /**
  * @param {string} input The string to convert.
  * @return The given string with random casings.
