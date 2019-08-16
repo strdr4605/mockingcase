@@ -107,7 +107,6 @@ mOcKiNgCaSe.overrideString = () => {
  * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {string} string in mOcKiNgCaSe
- * @see mOcKiNgCaSe
  */
 mOcKiNgCaSe.overrideConsole = (options = {}) => {
   const print = console.log;

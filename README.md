@@ -183,8 +183,6 @@ Outputs a message to the console in mOcKiNgCaSe.
 ### mOcKiNgCaSe.overrideConsole([options])
 Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 
-**Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
-
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
