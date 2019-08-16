@@ -70,6 +70,18 @@ mOcKiNgCaSe.overrideString();
 'foo_bar'.toMockingCase({firstUpper: true});
 //=> 'FoO_BaR'
 
+// Optionally overrides console.log and returns a mOcKiNgCaSe object
+mOcKiNgCaSe.overrideConsole();
+console.log('Hello');
+//=> 'hElLo'
+
+const mOcKiNgCaSe = require('mockingcase').overrideConsole();
+console.log('foobar')
+// => 'fOoBaR'
+mOcKiNgCaSe('foobar');
+// => 'fOoBaR'
+ 
+
 // Optionally create an initial config with default options
 const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
 // const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
@@ -157,6 +169,22 @@ Outputs a message to the console in mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>string[]</code> |  | String(S) to be converted |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
+| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+
+<a name="mOcKiNgCaSe"></a>
+
+<hr>
+
+<a name="mOcKiNgCaSe.overrideConsole"></a>
+
+### mOcKiNgCaSe.overrideConsole([options])
+Overrides the console.log input annd prints it in the mOcKiNgCaSe.
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
 | [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
