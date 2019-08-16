@@ -70,6 +70,18 @@ mOcKiNgCaSe.overrideString();
 'foo_bar'.toMockingCase({firstUpper: true});
 //=> 'FoO_BaR'
 
+// Optionally overrides console.log and returns a mOcKiNgCaSe object
+mOcKiNgCaSe.overrideConsole();
+console.log('Hello');
+//=> 'hElLo'
+
+const mOcKiNgCaSe = require('mockingcase').overrideConsole();
+console.log('foobar')
+// => 'fOoBaR'
+mOcKiNgCaSe('foobar');
+// => 'fOoBaR'
+ 
+
 // Optionally create an initial config with default options
 const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
 // const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});

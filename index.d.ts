@@ -20,9 +20,11 @@ declare module "mockingcase" {
       log: (input: string, options?: Options) => void;
       config: (defaultOptions: Options) => MockingCase;
       overrideString: () => MockingCase;
+      overrideConsole: () => MockingCase;
     };
     export function log(input: string | string[], options?: Options): void;
     export function config(defaultOptions: Options): void;
     export function overrideString(): MockingCase;
+    export function overrideConsole(): MockingCase;
   }
 }

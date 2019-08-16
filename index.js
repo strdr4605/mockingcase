@@ -99,6 +99,14 @@ mOcKiNgCaSe.overrideString = () => {
   return mOcKiNgCaSe;
 };
 
+mOcKiNgCaSe.overrideConsole = (options = {}) => {
+  const print = { ...console };
+  console.log = value => {
+    print.log(mOcKiNgCaSe(value, options));
+  };
+  return mOcKiNgCaSe;
+};
+
 /**
  * @param {string|string[]} input The user-given input.
  * @return If the given input is an array of strings.
