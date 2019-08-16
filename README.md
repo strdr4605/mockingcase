@@ -178,4 +178,22 @@ Outputs a message to the console in mOcKiNgCaSe.
 
 <hr>
 
+<a name="mOcKiNgCaSe.overrideConsole"></a>
+
+### mOcKiNgCaSe.overrideConsole([options])
+Overrides the console.log input annd prints it in the mOcKiNgCaSe.
+
+**Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
+| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
+| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
+| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+
+<a name="mOcKiNgCaSe"></a>
+
+<hr>
+
 **See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**
