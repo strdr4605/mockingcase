@@ -81,7 +81,6 @@ console.log('foobar')
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
 
-
 // Optionally create an initial config with default options
 const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
 // const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
@@ -99,12 +98,12 @@ mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>](#mockingcaseinput-options-%E2%87%92-codestringcode)
-- [mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>](#mockingcaseoverridestring-%E2%87%92-codemockingcasecode)
-- [String.prototype.toMockingCase([options]) ⇒ <code>string</code>](#stringprototypetomockingcaseoptions-%E2%87%92-codestringcode)
-- [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mockingcaseconfigdefaultoptions-%E2%87%92-codemockingcasecode)
-- [mOcKiNgCaSe.log(input, [options])](#mockingcaseloginput-options)
-- [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mockingcaseoverrideconsoleoptions-%E2%87%92-codemockingcasecode)
+- [mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>](#mOcKiNgCaSe)
+- [mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideString)
+- [String.prototype.toMockingCase([options]) ⇒ <code>string</code>](#String.prototype.toMockingCase)
+- [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.config)
+- [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
+- [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
