@@ -80,7 +80,7 @@ console.log('foobar')
 // => 'fOoBaR'
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
- 
+
 
 // Optionally create an initial config with default options
 const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
@@ -94,6 +94,19 @@ mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
 ```
 
 ## API
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>](#mockingcaseinput-options-%E2%87%92-codestringcode)
+- [mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>](#mockingcaseoverridestring-%E2%87%92-codemockingcasecode)
+- [mOcKiNgCaSe.config(defaultOptions) ⇒](#mockingcaseconfigdefaultoptions-%E2%87%92)
+- [String.prototype.toMockingCase([options]) ⇒ <code>string</code>](#stringprototypetomockingcaseoptions-%E2%87%92-codestringcode)
+- [mOcKiNgCaSe.log(input, [options])](#mockingcaseloginput-options)
+- [mOcKiNgCaSe.overrideConsole([options])](#mockingcaseoverrideconsoleoptions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 <a name="mOcKiNgCaSe"></a>
 
 ### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
