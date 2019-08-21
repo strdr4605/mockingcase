@@ -5,6 +5,8 @@
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
  * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {(string | RegExp)} options.upper=null
+ * @param {(string | RegExp)} options.lower=null
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {string} string in mOcKiNgCaSe
  */
@@ -14,6 +16,8 @@ function mOcKiNgCaSe(input = "", options) {
       random: false,
       onlyLetters: false,
       firstUpper: false,
+      upper: null,
+      lower: null,
     },
     options,
   );
