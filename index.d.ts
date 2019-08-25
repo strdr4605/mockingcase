@@ -15,7 +15,7 @@ declare module "mockingcase" {
   namespace mockingcase {
     type MockingCase = (
       input: string,
-      options?: Options
+      options?: Options,
     ) => string & {
       log: (input: string, options?: Options) => void;
       config: (defaultOptions: Options) => MockingCase;
