@@ -9,12 +9,14 @@
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input = "", options) {
-  options = {
-    random: false,
-    onlyLetters: false,
-    firstUpper: false,
-    ...options,
-  };
+  options = Object.assign(
+    {
+      random: false,
+      onlyLetters: false,
+      firstUpper: false,
+    },
+    options,
+  );
 
   // Combine strings first to form the input string.
   if (isArrayOfStrings(input)) {
@@ -85,7 +87,6 @@ mOcKiNgCaSe.overrideString = () => {
    * @returns {string} string in mOcKiNgCaSe
    * @see mOcKiNgCaSe
    */
-  // eslint-disable-next-line func-names
   String.prototype.toMockingCase = function toMockingCase(options) {
     return mOcKiNgCaSe(this, options);
   };

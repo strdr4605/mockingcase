@@ -24,5 +24,6 @@ module.exports = {
     "no-plusplus": 0,
     "no-param-reassign": 1,
     "arrow-parens": [2, "as-needed"],
+    "prefer-object-spread": 0,
   },
 };
