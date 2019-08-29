@@ -14,8 +14,9 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "format": "prettier --write \"*.[jt]s\"",
-    "pre-commit": "npm run format && npm test"
+    "format": "prettier --config .prettierrc --write \"*.[jt]s\"",
+    "lint": "eslint index.js mockingcase.test.js",
+    "pre-commit": "npm run format && npm run lint && npm test"
   },
   "husky": {
     "hooks": {
@@ -35,6 +36,10 @@
   "author": "Dragoș Străinu",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.2",
     "husky": "^2.4.1",
     "jest": "^23.6.0",
     "prettier": "1.18.2"

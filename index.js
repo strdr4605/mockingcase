@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input String(s) to be converted.
@@ -15,9 +13,9 @@ function mOcKiNgCaSe(input = "", options) {
     {
       random: false,
       onlyLetters: false,
-      firstUpper: false
+      firstUpper: false,
     },
-    options
+    options,
   );
 
   // Combine strings first to form the input string.
@@ -46,9 +44,8 @@ function mOcKiNgCaSe(input = "", options) {
 
   if (options.firstUpper) {
     return convert(input, (str, i) => i % 2 === 0);
-  } else {
-    return convert(input, (str, i) => i % 2 === 1);
   }
+  return convert(input, (str, i) => i % 2 === 1);
 }
 
 /**
@@ -70,11 +67,9 @@ mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
  * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe
  * @return mOcKiNgCaSe with default options
  */
-mOcKiNgCaSe.config = defaultOptions => {
-  return (input = "", overridedDefaultOptions) => {
-    const options = overridedDefaultOptions || defaultOptions;
-    return mOcKiNgCaSe(input, options);
-  };
+mOcKiNgCaSe.config = defaultOptions => (input = "", overridedDefaultOptions) => {
+  const options = overridedDefaultOptions || defaultOptions;
+  return mOcKiNgCaSe(input, options);
 };
 
 /**
@@ -92,7 +87,7 @@ mOcKiNgCaSe.overrideString = () => {
    * @returns {string} string in mOcKiNgCaSe
    * @see mOcKiNgCaSe
    */
-  String.prototype.toMockingCase = function(options) {
+  String.prototype.toMockingCase = function toMockingCase(options) {
     return mOcKiNgCaSe(this, options);
   };
 
@@ -128,9 +123,7 @@ function isArrayOfStrings(input) {
 
   input.forEach((value, i) => {
     if (typeof value !== "string") {
-      throw TypeError(
-        `Expected array of strings but got type '${typeof value}' at index ${i}`
-      );
+      throw TypeError(`Expected array of strings but got type '${typeof value}' at index ${i}`);
     }
   });
 
@@ -153,11 +146,7 @@ function randomCase(input) {
  * @return The converted string.
  */
 function convert(input, shouldLetterBeUpperCase) {
-  return input.replace(/./g, (str, i) => {
-    return shouldLetterBeUpperCase(str, i)
-      ? str.toUpperCase()
-      : str.toLowerCase();
-  });
+  return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
 
 module.exports = mOcKiNgCaSe;
