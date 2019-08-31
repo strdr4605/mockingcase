@@ -313,32 +313,32 @@ describe("mockingcase", () => {
   });
 
   describe(`option.upper | set as invalid type`, () => {
-    test("Should guarantee throw Error if set as number", () => {
+    test("Should throw Error if set as number", () => {
       const options = {
         upper: 312313,
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as boolean", () => {
+    test("Should throw Error if set as boolean", () => {
       const options = {
         upper: true,
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as array", () => {
+    test("Should throw Error if set as array", () => {
       const options = {
-        upper: ['a', 's', 'g'],
+        upper: ["a", "s", "g"],
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as dict", () => {
+    test("Should throw Error if set as dict", () => {
       const options = {
-        upper: { first: 'a', second: 'b' },
+        upper: { first: "a", second: "b" },
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
   });
@@ -434,32 +434,32 @@ describe("mockingcase", () => {
   });
 
   describe(`option.lower | set as invalid type`, () => {
-    test("Should guarantee throw Error if set as number", () => {
+    test("Should throw Error if set as number", () => {
       const options = {
         lower: 312313,
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as boolean", () => {
+    test("Should throw Error if set as boolean", () => {
       const options = {
         lower: true,
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as array", () => {
+    test("Should throw Error if set as array", () => {
       const options = {
-        lower: ['a', 's', 'g'],
+        lower: ["a", "s", "g"],
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
-    test("Should guarantee throw Error if set as dict", () => {
+    test("Should throw Error if set as dict", () => {
       const options = {
-        lower: { first: 'a', second: 'b' },
+        lower: { first: "a", second: "b" },
       };
-      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      const invalidCall = mOcKiNgCaSe.bind(null, "hello world", options);
       expect(invalidCall).toThrow();
     });
   });
