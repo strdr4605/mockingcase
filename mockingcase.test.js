@@ -227,7 +227,7 @@ describe("mockingcase", () => {
     const capitalizeInput = "Hello World";
     const upperCaseInput = "HELLO WORLD";
 
-    test("it should make match substring upper case", () => {
+    test("Should make match substring upper case", () => {
       const expectedOutput = "hElLo WORLd";
       const options = {
         upper: "worl",
@@ -240,7 +240,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should make matched letters upper case", () => {
+    test("Should make matched letters upper case", () => {
       const expectedOutput = "hELLO WORLd";
       const options = {
         upper: "[lwro]",
@@ -253,7 +253,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should keep string as default since substring does not match", () => {
+    test("Should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
       const options = {
         upper: "ohd",
@@ -272,7 +272,7 @@ describe("mockingcase", () => {
     const capitalizeInput = "Hello World";
     const upperCaseInput = "HELLO WORLD";
 
-    test("it should guarantee matched substring is upper case", () => {
+    test("Should guarantee matched substring is upper case", () => {
       const expectedOutput = "hElLo WORLd";
       const options = {
         upper: /worl/,
@@ -285,7 +285,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should guarantee all matched letters are upper case", () => {
+    test("Should guarantee all matched letters are upper case", () => {
       const expectedOutput = "hELLO WORLd";
       const options = {
         upper: /[lwro]/,
@@ -298,7 +298,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should keep string as default since substring does not match", () => {
+    test("Should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
       const options = {
         upper: /ohd/,
@@ -312,12 +312,43 @@ describe("mockingcase", () => {
     });
   });
 
+  describe(`option.upper | set as invalid type`, () => {
+    test("Should guarantee throw Error if set as number", () => {
+      const options = {
+        upper: 312313,
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as boolean", () => {
+      const options = {
+        upper: true,
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as array", () => {
+      const options = {
+        upper: ['a', 's', 'g'],
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as dict", () => {
+      const options = {
+        upper: { first: 'a', second: 'b' },
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+  });
+
   describe(`option.lower | set as String`, () => {
     const lowerCaseInput = "hello world";
     const capitalizeInput = "Hello World";
     const upperCaseInput = "HELLO WORLD";
 
-    test("it should make match substring lower case", () => {
+    test("Should make match substring lower case", () => {
       const expectedOutput = "hElLo world";
       const options = {
         lower: "WORL",
@@ -330,7 +361,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should make matched letters lower case", () => {
+    test("Should make matched letters lower case", () => {
       const expectedOutput = "hEllo world";
       const options = {
         lower: "[LWRO]",
@@ -343,7 +374,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should keep string as default since substring does not match", () => {
+    test("Should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
       const options = {
         lower: "ohd",
@@ -362,7 +393,7 @@ describe("mockingcase", () => {
     const capitalizeInput = "Hello World";
     const upperCaseInput = "HELLO WORLD";
 
-    test("it should guarantee matched substring is lower case", () => {
+    test("Should guarantee matched substring is lower case", () => {
       const expectedOutput = "hElLo world";
       const options = {
         lower: /WORL/,
@@ -375,7 +406,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should guarantee all matched letters are lower case", () => {
+    test("Should guarantee all matched letters are lower case", () => {
       const expectedOutput = "helLo worLd";
       const options = {
         lower: /[OE]/,
@@ -388,7 +419,7 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
     });
 
-    test("it should keep string as default since substring does not match", () => {
+    test("Should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
       const options = {
         lower: /ohd/,
@@ -399,6 +430,37 @@ describe("mockingcase", () => {
       expect(resultOutput).toStrictEqual(expectedOutput);
       resultOutput = mOcKiNgCaSe(upperCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
+    });
+  });
+
+  describe(`option.lower | set as invalid type`, () => {
+    test("Should guarantee throw Error if set as number", () => {
+      const options = {
+        lower: 312313,
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as boolean", () => {
+      const options = {
+        lower: true,
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as array", () => {
+      const options = {
+        lower: ['a', 's', 'g'],
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
+    });
+    test("Should guarantee throw Error if set as dict", () => {
+      const options = {
+        lower: { first: 'a', second: 'b' },
+      };
+      const invalidCall = mOcKiNgCaSe.bind(null, 'hello world', options);
+      expect(invalidCall).toThrow();
     });
   });
 });
