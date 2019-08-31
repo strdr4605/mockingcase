@@ -50,12 +50,12 @@ function mOcKiNgCaSe(input = "", options) {
     input = convert(input, (str, i) => i % 2 === 1);
   }
 
-  if (options.upper) {
-    input = convertToSpecificCase(input, options.upper, "upper");
+  if (options.lower) {
+    input = convertToSpecificCase(input, options.lower, str => str.toLowerCase());
   }
 
-  if (options.lower) {
-    input = convertToSpecificCase(input, options.lower, "lower");
+  if (options.upper) {
+    input = convertToSpecificCase(input, options.upper, str => str.toUpperCase());
   }
 
   return input;
@@ -96,6 +96,8 @@ mOcKiNgCaSe.overrideString = () => {
    * @param {boolean} options.random=false - If case conversion should be randomized.
    * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
    * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+   * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
+   * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
    * When combined with `options.random`, the first letter of the random string will be capitalized.
    * @returns {string} string in mOcKiNgCaSe
    * @see mOcKiNgCaSe
@@ -113,6 +115,8 @@ mOcKiNgCaSe.overrideString = () => {
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
  * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
+ * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {function} mOcKiNgCaSe function
  * @see mOcKiNgCaSe
@@ -155,23 +159,15 @@ function randomCase(input) {
  * Converts matched letters to a specified case
  * @param {string} input - string to convert
  * @param {(string | RegExp)} regex - use to match letters you want to convert
- * @caseType {string} caseType - the case type
- * @return the given input with match letters to the  case type determined
+ * @param {function} caseReplacer - a function that changes the letter's case
+ * @return {string} given input with match letters to the  case type determined
  */
-function convertToSpecificCase(input, regex, caseType) {
-  if (caseType !== "lower" && caseType !== "upper") {
-    throw new Error(`casetype type must be 'lower' or 'upper'`);
-  }
+function convertToSpecificCase(input, regex, caseReplacer) {
   if (typeof regex !== "string" && !(regex instanceof RegExp)) {
-    throw TypeError(
-      `options.${caseType}: Expected string or RegExp but got "${typeof regex}"`
-    );
+    throw TypeError(`Expected string or RegExp but got "${typeof regex}"`);
   }
   regex = new RegExp(regex, "gi");
-  if (caseType === "upper") {
-    return input.replace(regex, str => str.toUpperCase());
-  }
-  return input.replace(regex, str => str.toLowerCase());
+  return input.replace(regex, caseReplacer);
 }
 
 /**

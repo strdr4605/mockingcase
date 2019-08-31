@@ -229,8 +229,8 @@ describe("mockingcase", () => {
 
     test("it should make match substring upper case", () => {
       const expectedOutput = "hElLo WORLd";
-      let options = {
-        upper: "worl"
+      const options = {
+        upper: "worl",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -242,8 +242,8 @@ describe("mockingcase", () => {
 
     test("it should make matched letters upper case", () => {
       const expectedOutput = "hELLO WORLd";
-      let options = {
-        upper: "[lwro]"
+      const options = {
+        upper: "[lwro]",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -255,8 +255,8 @@ describe("mockingcase", () => {
 
     test("it should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
-      let options = {
-        upper: "ohd"
+      const options = {
+        upper: "ohd",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -274,8 +274,8 @@ describe("mockingcase", () => {
 
     test("it should guarantee matched substring is upper case", () => {
       const expectedOutput = "hElLo WORLd";
-      let options = {
-        upper: /worl/
+      const options = {
+        upper: /worl/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -287,8 +287,8 @@ describe("mockingcase", () => {
 
     test("it should guarantee all matched letters are upper case", () => {
       const expectedOutput = "hELLO WORLd";
-      let options = {
-        upper: /[lwro]/
+      const options = {
+        upper: /[lwro]/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -300,8 +300,8 @@ describe("mockingcase", () => {
 
     test("it should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
-      let options = {
-        upper: /ohd/
+      const options = {
+        upper: /ohd/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -319,8 +319,8 @@ describe("mockingcase", () => {
 
     test("it should make match substring lower case", () => {
       const expectedOutput = "hElLo world";
-      let options = {
-        lower: "WORL"
+      const options = {
+        lower: "WORL",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -332,8 +332,8 @@ describe("mockingcase", () => {
 
     test("it should make matched letters lower case", () => {
       const expectedOutput = "hEllo world";
-      let options = {
-        lower: "[LWRO]"
+      const options = {
+        lower: "[LWRO]",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -345,8 +345,8 @@ describe("mockingcase", () => {
 
     test("it should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
-      let options = {
-        lower: "ohd"
+      const options = {
+        lower: "ohd",
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -364,8 +364,8 @@ describe("mockingcase", () => {
 
     test("it should guarantee matched substring is lower case", () => {
       const expectedOutput = "hElLo world";
-      let options = {
-        lower: /WORL/
+      const options = {
+        lower: /WORL/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -377,8 +377,8 @@ describe("mockingcase", () => {
 
     test("it should guarantee all matched letters are lower case", () => {
       const expectedOutput = "helLo worLd";
-      let options = {
-        lower: /[OE]/
+      const options = {
+        lower: /[OE]/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
@@ -390,8 +390,8 @@ describe("mockingcase", () => {
 
     test("it should keep string as default since substring does not match", () => {
       const expectedOutput = "hElLo wOrLd";
-      let options = {
-        lower: /ohd/
+      const options = {
+        lower: /ohd/,
       };
       let resultOutput = mOcKiNgCaSe(lowerCaseInput, options);
       expect(resultOutput).toStrictEqual(expectedOutput);
