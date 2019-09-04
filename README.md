@@ -207,4 +207,12 @@ Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 
 <hr>
 
+## CDN
+Mockingcase can be served to the browser from a CDN. Simply put `index.js` into your server files or use Mockingcase from a CDN. Some CDNs are provided below:
+
+|Name|Link|
+|-|-|
+|unpkg.com|https://unpkg.com/mockingcase/index.js|
+|JSDelivr.com|https://cdn.jsdelivr.net/npm/mockingcase/index.min.js|
+
 **See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**

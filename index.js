@@ -149,4 +149,4 @@ function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
 
-module.exports = mOcKiNgCaSe;
+if (typeof module !== 'undefined') module.exports = mOcKiNgCaSe;
