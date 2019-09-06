@@ -9,7 +9,8 @@
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input = "", options) {
-  options = Object.assign({
+  options = Object.assign(
+    {
       random: false,
       onlyLetters: false,
       firstUpper: false,
