@@ -9,8 +9,7 @@
  * @returns {string} string in mOcKiNgCaSe
  */
 function mOcKiNgCaSe(input = "", options) {
-  options = Object.assign(
-    {
+  options = Object.assign({
       random: false,
       onlyLetters: false,
       firstUpper: false,
@@ -68,7 +67,7 @@ mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
  * @return mOcKiNgCaSe with default options
  */
 mOcKiNgCaSe.config = defaultOptions => (input = "", overridedDefaultOptions) => {
-  const options = overridedDefaultOptions || defaultOptions;
+  const options = Object.assign(defaultOptions || {}, overridedDefaultOptions || {});
   return mOcKiNgCaSe(input, options);
 };
 
