@@ -142,6 +142,13 @@ describe("mockingcase", () => {
       expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
     });
 
+    test("NO default options", () => {
+      const mOcKiNgCaSe = require("./index").config();
+      const input = "hello123";
+      const expectedOutput = "hElLo123";
+      expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
+    });
+
     test("override default options", () => {
       const mOcKiNgCaSe = require("./index").config({
         onlyLetters: true,
