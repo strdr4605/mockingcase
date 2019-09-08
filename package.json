@@ -1,8 +1,11 @@
 {
-  "name": "mockingcase",
-  "version": "1.9.1",
+  "name": "@strdr4605/mockingcase",
+  "version": "1.9.2",
   "description": "Convert a string to mOcKiNgCaSe",
   "homepage": "https://github.com/strdr4605/mockingcase.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/strdr4605/mockingcase/issues",
     "email": "str.dr4605@gmail.com"
