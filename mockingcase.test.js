@@ -132,21 +132,38 @@ describe("mockingcase", () => {
     });
   });
 
-  describe("default options when importing/requering package", () => {
+  describe("default options when importing/requiring package", () => {
     test("default options", () => {
-      const mOcKiNgCaSe = require("./index").config({ onlyLetters: true });
+      const mOcKiNgCaSe = require("./index").config({
+        onlyLetters: true,
+      });
       const input = "hello123";
       const expectedOutput = "hElLo";
       expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
     });
 
     test("override default options", () => {
-      const mOcKiNgCaSe = require("./index").config({ onlyLetters: true });
+      const mOcKiNgCaSe = require("./index").config({
+        onlyLetters: true,
+      });
       const input = "hello123";
       const options = {
         onlyLetters: false,
       };
       const expectedOutput = "hElLo123";
+      expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
+    });
+
+    test("overriding default options should keep unaffected defaults", () => {
+      const mOcKiNgCaSe = require("./index").config({
+        onlyLetters: true,
+        firstUpper: true,
+      });
+      const input = "hello123";
+      const options = {
+        onlyLetters: false,
+      };
+      const expectedOutput = "HeLlO123";
       expect(mOcKiNgCaSe(input, options)).toEqual(expectedOutput);
     });
   });
@@ -158,7 +175,9 @@ describe("mockingcase", () => {
     });
 
     test("For config option if the input is undefined, an error should be thrown", () => {
-      const mOcKiNgCaSe = require("./index").config({ onlyLetters: true });
+      const mOcKiNgCaSe = require("./index").config({
+        onlyLetters: true,
+      });
       const input = undefined;
       const options = {
         onlyLetters: false,
