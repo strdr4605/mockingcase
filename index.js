@@ -68,7 +68,7 @@ mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
  * @return mOcKiNgCaSe with default options
  */
 mOcKiNgCaSe.config = defaultOptions => (input = "", overridedDefaultOptions) => {
-  const options = overridedDefaultOptions || defaultOptions;
+  const options = Object.assign(defaultOptions || {}, overridedDefaultOptions || {});
   return mOcKiNgCaSe(input, options);
 };
 

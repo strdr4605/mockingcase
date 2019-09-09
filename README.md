@@ -10,17 +10,17 @@ Inspired by the meme [Mocking Spongebob](https://knowyourmeme.com/memes/mocking-
 
 ## Install
 
-```
-$ npm install mockingcase --save
+```bash
+npm install @strdr4605/mockingcase --save
 ```
 
 ## Usage
 
 ```js
-const mOcKiNgCaSe = require('mockingcase');
-// es6 - import mOcKiNgCaSe from 'mockingcase';
-//  ts - import * as mOcKiNgCaSe from 'mockingcase';
-//  ts - import mOcKiNgCaSe = require('mockingcase');
+const mOcKiNgCaSe = require('@strdr4605/mockingcase');
+// es6 - import mOcKiNgCaSe from '@strdr4605/mockingcase';
+//  ts - import * as mOcKiNgCaSe from '@strdr4605/mockingcase';
+//  ts - import mOcKiNgCaSe = require('@strdr4605/mockingcase');
 
 mOcKiNgCaSe('foo-bar');
 //=> 'fOo-bAr'
@@ -75,14 +75,14 @@ mOcKiNgCaSe.overrideConsole();
 console.log('Hello');
 //=> 'hElLo'
 
-const mOcKiNgCaSe = require('mockingcase').overrideConsole();
+const mOcKiNgCaSe = require('@strdr4605/mockingcase').overrideConsole();
 console.log('foobar')
 // => 'fOoBaR'
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
 
 // Optionally create an initial config with default options
-const mOcKiNgCaSe = require('mockingcase').config({onlyLetters: true, firstUpper: true});
+const mOcKiNgCaSe = require('@strdr4605/mockingcase').config({onlyLetters: true, firstUpper: true});
 // const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
 
 mOcKiNgCaSe('foo bar42');
