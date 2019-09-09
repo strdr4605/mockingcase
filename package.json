@@ -1,6 +1,6 @@
 {
   "name": "@strdr4605/mockingcase",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Convert a string to mOcKiNgCaSe",
   "homepage": "https://github.com/strdr4605/mockingcase.git",
   "publishConfig": {
