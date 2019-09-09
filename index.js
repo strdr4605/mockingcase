@@ -148,5 +148,6 @@ function randomCase(input) {
 function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
-
-if (typeof module !== 'undefined') module.exports = mOcKiNgCaSe;
+if (typeof window === 'undefined') {
+  module.exports = mOcKiNgCaSe;
+}
