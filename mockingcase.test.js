@@ -223,19 +223,18 @@ describe("mockingcase", () => {
 
   describe("Browser Tools", () => {
     test("Should not export module in a browser environment", () => {
-      jest.resetModules()
+      jest.resetModules();
 
-      global.window = {a: 1};
-      const mod = require('./index.js');
-      expect(typeof mod).not.toBe('function')
-    })
+      global.window = { a: 1 };
+      const mod = require("./index.js");
+      expect(typeof mod).not.toBe("function");
+    });
     test("Should export module in a node environment", () => {
-      jest.resetModules()
+      jest.resetModules();
 
       global.window = undefined;
-      const mod = require('./index.js');
-      expect(typeof mod).toBe('function')
-    })
-  })
-
+      const mod = require("./index.js");
+      expect(typeof mod).toBe("function");
+    });
+  });
 });
