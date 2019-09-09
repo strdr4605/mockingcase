@@ -104,6 +104,9 @@ mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
 - [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.config)
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
+- [Browser Usage](#browser-usage)
+  - [Self Hosting](#self-hosting)
+  - [CDN Usage](#cdn-usage)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -208,8 +211,21 @@ Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 <hr>
 
 ## Browser Usage
-mOcKiNgCaSe can be used in a node environment, as well as in the browser. You can serve it yourself, or pull it from a CDN.
-
+mOcKiNgCaSe can be used in a node environment, as well as in the browser. You can serve it yourself, or pull it from a CDN. For example:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>mOcKiNgCaSe</title>
+</head>
+<body>
+</body>
+<script scr="https://unpkg.com/mockingcase/index.js"></script>
+<script>
+  mOcKiNgCaSe('foo-bar');
+</script>
+</html>
+```
 ### Self Hosting
 To host mOcKiNgCaSe yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
 
