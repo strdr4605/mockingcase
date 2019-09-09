@@ -207,8 +207,14 @@ Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 
 <hr>
 
-## CDN
-Mockingcase can be served to the browser from a CDN. Simply put `index.js` into your server files or use Mockingcase from a CDN. Some CDNs are provided below:
+## Browser Usage
+mOcKiNgCaSe can be used in a node environment, as well as in the browser. You can serve it yourself, or pull it from a CDN.
+
+### Self Hosting
+To host mOcKiNgCaSe yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
+
+### CDN Usage
+Simply pull in one of the following JS files below.
 
 |Name|Link|
 |-|-|
