@@ -260,6 +260,8 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 <script>
   const output = mOcKiNgCaSe('foo-bar');
   console.log(output);
+  const output2 = mockingcase('foo-bar');
+  console.log(output2);
 </script>
 </html>
 ```
