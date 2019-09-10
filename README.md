@@ -51,45 +51,6 @@ mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'FOo'
 //=> 'FoO'
 //=> 'FOO'
-
-mOcKiNgCaSe(['foo','bar']);
-//=> 'fOoBaR'
-
-mOcKiNgCaSe(undefined);
-//=> Error "An input is required"
-
-mOcKiNgCaSe.log('foo bar');
-// console.log('fOo bAr');
-
-// Optionally create String.prototype.toMockingCase
-mOcKiNgCaSe.overrideString();
-
-'foo_bar'.toMockingCase();
-//=> 'fOo_bAr'
-
-'foo_bar'.toMockingCase({firstUpper: true});
-//=> 'FoO_BaR'
-
-// Optionally overrides console.log and returns a mOcKiNgCaSe object
-mOcKiNgCaSe.overrideConsole();
-console.log('Hello');
-//=> 'hElLo'
-
-const mOcKiNgCaSe = require('@strdr4605/mockingcase').overrideConsole();
-console.log('foobar')
-// => 'fOoBaR'
-mOcKiNgCaSe('foobar');
-// => 'fOoBaR'
-
-// Optionally create an initial config with default options
-const mOcKiNgCaSe = require('@strdr4605/mockingcase').config({onlyLetters: true, firstUpper: true});
-// const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
-
-mOcKiNgCaSe('foo bar42');
-//=> 'FoO BaR'
-
-mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
-//=> 'fOo bAr42'
 ```
 
 ## API
@@ -126,6 +87,43 @@ Converts the input string(s) to mOcKiNgCaSe.
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
+```js
+mOcKiNgCaSe('foo-bar');
+//=> 'fOo-bAr'
+
+mOcKiNgCaSe('aa', {random: false});
+//=> 'aA'
+
+mOcKiNgCaSe('aa', {random: true});
+//=> 'aa'
+//=> 'aA'
+//=> 'Aa'
+//=> 'AA'
+
+mOcKiNgCaSe('42foo!bar');
+//=> '42fOo!bAr'
+
+mOcKiNgCaSe('aa123', {onlyLetters: true});
+//=> 'aA'
+
+mOcKiNgCaSe('a13%$a', {onlyLetters: true});
+//=> 'aA'
+
+mOcKiNgCaSe('foo bar', {firstUpper: true});
+//=> 'FoO BaR'
+
+mOcKiNgCaSe('foo', {firstUpper: true, random: true});
+//=> 'Foo'
+//=> 'FOo'
+//=> 'FoO'
+//=> 'FOO'
+
+mOcKiNgCaSe(['foo','bar']);
+//=> 'fOoBaR'
+
+mOcKiNgCaSe(undefined);
+//=> Error "An input is required"
+```
 <hr>
 
 <a name="mOcKiNgCaSe.overrideString"></a>
@@ -137,6 +135,15 @@ Creates `String.prototype.toMockingCase()`.
 **Returns**: <code>mOcKiNgCaSe</code> - The mOcKiNgCaSe module.
 **See**: <code>toMockingCase</code>
 
+```js
+mOcKiNgCaSe.overrideString();
+
+'foo_bar'.toMockingCase();
+//=> 'fOo_bAr'
+
+'foo_bar'.toMockingCase({firstUpper: true});
+//=> 'FoO_BaR'
+```
 <hr>
 
 <a name="String.prototype.toMockingCase"></a>
@@ -156,6 +163,13 @@ Converts `this` string to mOcKiNgCaSe.
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
+```js
+'foo_bar'.toMockingCase();
+//=> 'fOo_bAr'
+
+'foo_bar'.toMockingCase({firstUpper: true});
+//=> 'FoO_BaR'
+```
 <hr>
 
 <a name="mOcKiNgCaSe.config"></a>
@@ -173,6 +187,16 @@ Outputs a mOcKiNgCaSe with default options.
 | defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
+```js
+const mOcKiNgCaSe = require('@strdr4605/mockingcase').config({onlyLetters: true, firstUpper: true});
+// const mOcKiNgCaSe = mOcKiNgCaSe.config({onlyLetters: true, firstUpper: true});
+
+mOcKiNgCaSe('foo bar42');
+//=> 'FoO BaR'
+
+mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
+//=> 'fOo bAr42'
+```
 <hr>
 
 <a name="mOcKiNgCaSe.log"></a>
@@ -190,6 +214,11 @@ Outputs a message to the console in mOcKiNgCaSe.
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
+```js
+mOcKiNgCaSe.log('foo bar');
+// console.log('fOo bAr');
+```
+
 <a name="mOcKiNgCaSe"></a>
 
 <hr>
@@ -206,6 +235,13 @@ Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
 
+```js
+const mOcKiNgCaSe = require('@strdr4605/mockingcase').overrideConsole();
+console.log('foobar')
+// => 'fOoBaR'
+mOcKiNgCaSe('foobar');
+// => 'fOoBaR'
+```
 <a name="mOcKiNgCaSe"></a>
 
 <hr>
@@ -220,9 +256,12 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </head>
 <body>
 </body>
-<script scr="https://unpkg.com/mockingcase/index.js"></script>
+<script src="https://unpkg.com/mockingcase/index.js"></script>
 <script>
-  mOcKiNgCaSe('foo-bar');
+  const output = mOcKiNgCaSe('foo-bar');
+  console.log(output);
+  const output2 = mockingcase('foo-bar');
+  console.log(output2);
 </script>
 </html>
 ```

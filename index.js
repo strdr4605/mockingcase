@@ -148,6 +148,9 @@ function randomCase(input) {
 function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
-if (typeof window === "undefined") {
+
+const mockingcase = mOcKiNgCaSe; // eslint-disable-line no-unused-vars
+
+try {
   module.exports = mOcKiNgCaSe;
-}
+} catch (e) {} // eslint-disable-line no-empty

@@ -22,7 +22,7 @@ module.exports = {
     quotes: 0,
     "no-use-before-define": 0,
     "no-plusplus": 0,
-    "no-param-reassign": 1,
+    "no-param-reassign": 0,
     "arrow-parens": [2, "as-needed"],
     "prefer-object-spread": 0,
   },
