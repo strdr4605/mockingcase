@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-var
+var mockingcase;
 /**
  * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input String(s) to be converted.
@@ -148,6 +150,8 @@ function randomCase(input) {
 function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
-if (typeof window === "undefined") {
+mockingcase = mOcKiNgCaSe;
+
+try {
   module.exports = mOcKiNgCaSe;
-}
+} catch (e) {} // eslint-disable-line no-empty

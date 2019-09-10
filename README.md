@@ -220,9 +220,10 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </head>
 <body>
 </body>
-<script scr="https://unpkg.com/mockingcase/index.js"></script>
+<script src="https://unpkg.com/mockingcase/index.js"></script>
 <script>
-  mOcKiNgCaSe('foo-bar');
+  const output = mOcKiNgCaSe('foo-bar');
+  console.log(output);
 </script>
 </html>
 ```

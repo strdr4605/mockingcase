@@ -25,5 +25,7 @@ module.exports = {
     "no-param-reassign": 1,
     "arrow-parens": [2, "as-needed"],
     "prefer-object-spread": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": 0,
   },
 };
