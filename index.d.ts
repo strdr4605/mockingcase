@@ -7,8 +7,8 @@ declare module "mockingcase" {
     random?: boolean;
     onlyLetters?: boolean;
     firstUpper?: boolean;
-    upper?: string | object;
-    lower?: string | object;
+    upper?: string | RegExp;
+    lower?: string | RegExp;
   }
 
   export = mockingcase;
