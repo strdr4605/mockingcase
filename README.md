@@ -51,6 +51,12 @@ mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'FOo'
 //=> 'FoO'
 //=> 'FOO'
+
+mOcKiNgCaSe('abcdef', {upper: \[bdf]\});
+//=> 'aBcDeF'
+
+mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
+//=> 'AbcdEf'
 ```
 
 ## API
@@ -86,6 +92,8 @@ Converts the input string(s) to mOcKiNgCaSe.
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
+| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
 
 ```js
 mOcKiNgCaSe('foo-bar');
@@ -111,6 +119,12 @@ mOcKiNgCaSe('a13%$a', {onlyLetters: true});
 
 mOcKiNgCaSe('foo bar', {firstUpper: true});
 //=> 'FoO BaR'
+
+mOcKiNgCaSe('foo bar', {firstUpper: true, lower: /[fb]/});
+//=> 'foO baR'
+
+mOcKiNgCaSe('foo bar', {firstUpper: true, upper: /[oa]/});
+//=> 'FOO BAR'
 
 mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'Foo'
@@ -162,6 +176,8 @@ Converts `this` string to mOcKiNgCaSe.
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
+| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
 
 ```js
 'foo_bar'.toMockingCase();
@@ -186,6 +202,8 @@ Outputs a mOcKiNgCaSe with default options.
 | defaultOptions.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
+| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
 
 ```js
 const mOcKiNgCaSe = require('@strdr4605/mockingcase').config({onlyLetters: true, firstUpper: true});
@@ -213,6 +231,8 @@ Outputs a message to the console in mOcKiNgCaSe.
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
+| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
 
 ```js
 mOcKiNgCaSe.log('foo bar');
@@ -234,6 +254,8 @@ Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 | options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
 | options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
 | options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
+| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
+| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
 
 ```js
 const mOcKiNgCaSe = require('@strdr4605/mockingcase').overrideConsole();
