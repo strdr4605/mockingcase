@@ -52,11 +52,11 @@ mOcKiNgCaSe('foo', {firstUpper: true, random: true});
 //=> 'FoO'
 //=> 'FOO'
 
-mOcKiNgCaSe('abcdef', {upper: \[bdf]\});
+mOcKiNgCaSe('abcdef', {upper: /[bdf]/});
 //=> 'aBcDeF'
 
 mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
-//=> 'AbcdEf'
+//=> 'abcdeF'
 ```
 
 ## API
