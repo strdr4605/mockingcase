@@ -72,10 +72,6 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
 - [Browser Usage](#browser-usage)
-  - [Self Hosting](#self-hosting)
-  - [CDN Usage](#cdn-usage)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <a name="mOcKiNgCaSe"></a>
 
@@ -287,6 +283,11 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </script>
 </html>
 ```
+### Self Hosting
+To host mOcKiNgCaSe yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
+
+### CDN Usage
+Simply pull in one of the following JS files below.
 
 |Name|Link|
 |-|-|
