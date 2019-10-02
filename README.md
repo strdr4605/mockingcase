@@ -72,10 +72,6 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
 - [Browser Usage](#browser-usage)
-  - [Self Hosting](#self-hosting)
-  - [CDN Usage](#cdn-usage)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <a name="mOcKiNgCaSe"></a>
 
