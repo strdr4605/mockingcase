@@ -75,7 +75,7 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 
 <a name="mOcKiNgCaSe"></a>
 
-### [:arrow_up:](#api) mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
+### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code> [:arrow_up:](#api)
 Converts the input string(s) to mOcKiNgCaSe.
 
 **Kind**: global function
@@ -138,7 +138,7 @@ mOcKiNgCaSe(undefined);
 
 <a name="mOcKiNgCaSe.overrideString"></a>
 
-### [:arrow_up:](#api) mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>
+### mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code> [:arrow_up:](#api)
 Creates `String.prototype.toMockingCase()`.
 
 **Kind**: global function
@@ -158,7 +158,7 @@ mOcKiNgCaSe.overrideString();
 
 <a name="String.prototype.toMockingCase"></a>
 
-### [:arrow_up:](#api) String.prototype.toMockingCase([options]) ⇒ <code>string</code>
+### String.prototype.toMockingCase([options]) ⇒ <code>string</code> [:arrow_up:](#api)
 Converts `this` string to mOcKiNgCaSe.
 
 **NOTE**: this function is created by invoking `mOcKiNgCaSe.overrideString()`.
@@ -186,7 +186,7 @@ Converts `this` string to mOcKiNgCaSe.
 
 <a name="mOcKiNgCaSe.config"></a>
 
-### [:arrow_up:](#api) mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>
+### mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code> [:arrow_up:](#api)
 Outputs a mOcKiNgCaSe with default options.
 
 **Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
@@ -215,7 +215,7 @@ mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
 
 <a name="mOcKiNgCaSe.log"></a>
 
-### [:arrow_up:](#api) mOcKiNgCaSe.log(input, [options])
+### mOcKiNgCaSe.log(input, [options]) [:arrow_up:](#api)
 Outputs a message to the console in mOcKiNgCaSe.
 
 **Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
@@ -241,7 +241,7 @@ mOcKiNgCaSe.log('foo bar');
 
 <a name="mOcKiNgCaSe.overrideConsole"></a>
 
-### [:arrow_up:](#api) mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>
+### mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code> [:arrow_up:](#api)
 Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
@@ -283,10 +283,10 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </script>
 </html>
 ```
-### [:arrow_up:](##browser-usage) Self Hosting
+### Self Hosting [:arrow_up:](##browser-usage)
 To host mOcKiNgCaSe yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
 
-### [:arrow_up:](##browser-usage) CDN Usage
+### CDN Usage [:arrow_up:](##browser-usage)
 Simply pull in one of the following JS files below.
 
 |Name|Link|
