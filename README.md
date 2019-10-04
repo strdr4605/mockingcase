@@ -283,10 +283,10 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </script>
 </html>
 ```
-### Self Hosting [:arrow_up:](##browser-usage)
+### Self Hosting [:arrow_up:](#browser-usage)
 To host mOcKiNgCaSe yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
 
-### CDN Usage [:arrow_up:](##browser-usage)
+### CDN Usage [:arrow_up:](#browser-usage)
 Simply pull in one of the following JS files below.
 
 |Name|Link|
