@@ -75,7 +75,7 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 
 <a name="mOcKiNgCaSe"></a>
 
-### mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
+### [:arrow_up:](#api) mOcKiNgCaSe(input, [options]) ⇒ <code>string</code>
 Converts the input string(s) to mOcKiNgCaSe.
 
 **Kind**: global function
@@ -138,7 +138,7 @@ mOcKiNgCaSe(undefined);
 
 <a name="mOcKiNgCaSe.overrideString"></a>
 
-### mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>
+### [:arrow_up:](#api) mOcKiNgCaSe.overrideString() ⇒ <code>mOcKiNgCaSe</code>
 Creates `String.prototype.toMockingCase()`.
 
 **Kind**: global function
@@ -158,7 +158,7 @@ mOcKiNgCaSe.overrideString();
 
 <a name="String.prototype.toMockingCase"></a>
 
-### String.prototype.toMockingCase([options]) ⇒ <code>string</code>
+### [:arrow_up:](#api) String.prototype.toMockingCase([options]) ⇒ <code>string</code>
 Converts `this` string to mOcKiNgCaSe.
 
 **NOTE**: this function is created by invoking `mOcKiNgCaSe.overrideString()`.
@@ -186,7 +186,7 @@ Converts `this` string to mOcKiNgCaSe.
 
 <a name="mOcKiNgCaSe.config"></a>
 
-### mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>
+### [:arrow_up:](#api) mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>
 Outputs a mOcKiNgCaSe with default options.
 
 **Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
@@ -215,7 +215,7 @@ mOcKiNgCaSe('foo bar42', {onlyLetters: false, firstUpper: false});
 
 <a name="mOcKiNgCaSe.log"></a>
 
-### mOcKiNgCaSe.log(input, [options])
+### [:arrow_up:](#api) mOcKiNgCaSe.log(input, [options])
 Outputs a message to the console in mOcKiNgCaSe.
 
 **Kind**: static method of [<code>mOcKiNgCaSe</code>](#mOcKiNgCaSe)
@@ -241,7 +241,7 @@ mOcKiNgCaSe.log('foo bar');
 
 <a name="mOcKiNgCaSe.overrideConsole"></a>
 
-### mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>
+### [:arrow_up:](#api) mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>
 Overrides the console.log input annd prints it in the mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
