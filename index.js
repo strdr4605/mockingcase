@@ -1,16 +1,16 @@
 /**
- * Converts the input string(s) to mOcKiNgCaSe.
+ * Converts the input string(s) to mockingcase.
  * @param {(string | string[])} input String(s) to be converted.
  * @param {object} [options={random: false,  onlyLetters: false}] Conversion options.
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mockingcase (e.g. MoCkInGcAsE).
  * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
  * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
  * When combined with `options.random`, the first letter of the random string will be capitalized.
- * @returns {string} string in mOcKiNgCaSe
+ * @returns {string} string in mockingcase
  */
-function mOcKiNgCaSe(input = "", options) {
+function mockingcase(input = "", options) {
   options = Object.assign(
     {
       random: false,
@@ -62,71 +62,71 @@ function mOcKiNgCaSe(input = "", options) {
 }
 
 /**
- * Outputs a message to the console in mOcKiNgCaSe.
+ * Outputs a message to the console in mockingcase.
  * @param {(string | string[])} input String(S) to be converted.
  * @param {object} [options={random: false}] Options for converting.
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mockingcase (e.g. MoCkInGcAsE).
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  */
-mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
+mockingcase.log = (input, options) => console.log(mockingcase(input, options));
 
 /**
- * Outputs a mOcKiNgCaSe with default options.
+ * Outputs a mockingcase with default options.
  * @param {object} defaultOptions Options for converting.
  * @param {boolean} defaultOptions.random=false - If case conversion should be randomized.
  * @param {boolean} defaultOptions.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe
- * @return mOcKiNgCaSe with default options
+ * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mockingcase (e.g. MoCkInGcAsE). * @returns {string} string in mockingcase
+ * @return mockingcase with default options
  */
-mOcKiNgCaSe.config = defaultOptions => (input = "", overridedDefaultOptions) => {
+mockingcase.config = defaultOptions => (input = "", overridedDefaultOptions) => {
   const options = Object.assign(defaultOptions || {}, overridedDefaultOptions || {});
-  return mOcKiNgCaSe(input, options);
+  return mockingcase(input, options);
 };
 
 /**
  * Creates `String.prototype.toMockingCase()`.
- * @return mOcKiNgCaSe
+ * @return mockingcase
  */
-mOcKiNgCaSe.overrideString = () => {
+mockingcase.overrideString = () => {
   /**
-   * Converts this string to mOcKiNgCaSe.
+   * Converts this string to mockingcase.
    * @param {object} [options={random: false}] Options for converting.
    * @param {boolean} options.random=false - If case conversion should be randomized.
    * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
-   * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+   * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mockingcase (e.g. MoCkInGcAsE).
    * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
    * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
    * When combined with `options.random`, the first letter of the random string will be capitalized.
-   * @returns {string} string in mOcKiNgCaSe
-   * @see mOcKiNgCaSe
+   * @returns {string} string in mockingcase
+   * @see mockingcase
    */
   String.prototype.toMockingCase = function toMockingCase(options) {
-    return mOcKiNgCaSe(this, options);
+    return mockingcase(this, options);
   };
 
-  return mOcKiNgCaSe;
+  return mockingcase;
 };
 
 /**
- * Overrides console.log input to print the input mOcKiNgCaSe.
+ * Overrides console.log input to print the input mockingcase.
  * @param {object} [options={random: false}] Options for converting.
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mockingcase (e.g. MoCkInGcAsE).
  * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
  * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
  * When combined with `options.random`, the first letter of the random string will be capitalized.
- * @returns {function} mOcKiNgCaSe function
- * @see mOcKiNgCaSe
+ * @returns {function} mockingcase function
+ * @see mockingcase
  */
-mOcKiNgCaSe.overrideConsole = (options = {}) => {
+mockingcase.overrideConsole = (options = {}) => {
   const print = console.log;
   console.log = value => {
-    print(mOcKiNgCaSe(value, options));
+    print(mockingcase(value, options));
   };
-  return mOcKiNgCaSe;
+  return mockingcase;
 };
 
 /**
@@ -181,8 +181,11 @@ function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
 
-const mockingcase = mOcKiNgCaSe; // eslint-disable-line no-unused-vars
+const mockingcase = mockingcase; // eslint-disable-line no-unused-vars
 
 try {
-  module.exports = mOcKiNgCaSe;
+  module.exports = mockingcase;
 } catch (e) {} // eslint-disable-line no-empty
+
+
+
