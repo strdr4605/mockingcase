@@ -10,7 +10,7 @@
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {string} string in mOcKiNgCaSe
  */
-function mOcKiNgCaSe(input = "", options) {
+function mockingcase(input = "", options) {
   options = Object.assign(
     {
       random: false,
@@ -70,7 +70,7 @@ function mOcKiNgCaSe(input = "", options) {
  * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  */
-mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
+mockingcase.log = (input, options) => console.log(mockingcase(input, options));
 
 /**
  * Outputs a mOcKiNgCaSe with default options.
@@ -80,16 +80,16 @@ mOcKiNgCaSe.log = (input, options) => console.log(mOcKiNgCaSe(input, options));
  * @param {boolean} defaultOptions.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). * @returns {string} string in mOcKiNgCaSe
  * @return mOcKiNgCaSe with default options
  */
-mOcKiNgCaSe.config = defaultOptions => (input = "", overridedDefaultOptions) => {
+mockingcase.config = defaultOptions => (input = "", overridedDefaultOptions) => {
   const options = Object.assign(defaultOptions || {}, overridedDefaultOptions || {});
-  return mOcKiNgCaSe(input, options);
+  return mockingcase(input, options);
 };
 
 /**
  * Creates `String.prototype.toMockingCase()`.
  * @return mOcKiNgCaSe
  */
-mOcKiNgCaSe.overrideString = () => {
+mockingcase.overrideString = () => {
   /**
    * Converts this string to mOcKiNgCaSe.
    * @param {object} [options={random: false}] Options for converting.
@@ -103,10 +103,10 @@ mOcKiNgCaSe.overrideString = () => {
    * @see mOcKiNgCaSe
    */
   String.prototype.toMockingCase = function toMockingCase(options) {
-    return mOcKiNgCaSe(this, options);
+    return mockingcase(this, options);
   };
 
-  return mOcKiNgCaSe;
+  return mockingcase;
 };
 
 /**
@@ -121,12 +121,12 @@ mOcKiNgCaSe.overrideString = () => {
  * @returns {function} mOcKiNgCaSe function
  * @see mOcKiNgCaSe
  */
-mOcKiNgCaSe.overrideConsole = (options = {}) => {
+mockingcase.overrideConsole = (options = {}) => {
   const print = console.log;
   console.log = value => {
-    print(mOcKiNgCaSe(value, options));
+    print(mockingcase(value, options));
   };
-  return mOcKiNgCaSe;
+  return mockingcase;
 };
 
 /**
@@ -181,8 +181,8 @@ function convert(input, shouldLetterBeUpperCase) {
   return input.replace(/./g, (str, i) => (shouldLetterBeUpperCase(str, i) ? str.toUpperCase() : str.toLowerCase()));
 }
 
-const mockingcase = mOcKiNgCaSe; // eslint-disable-line no-unused-vars
+const mockingcase = mockingcase; // eslint-disable-line no-unused-vars
 
 try {
-  module.exports = mOcKiNgCaSe;
+  module.exports = mockingcase;
 } catch (e) {} // eslint-disable-line no-empty
