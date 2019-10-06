@@ -1,6 +1,6 @@
 # mockingcase [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase)
 
-> Convert a string to mockingcase.
+> Convert a string to mOcKiNgCaSe.
 
 Read more on wikipedia [Studly caps](https://en.wikipedia.org/wiki/Studly_caps).
 
