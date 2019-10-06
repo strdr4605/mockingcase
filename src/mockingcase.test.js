@@ -3,7 +3,7 @@
  */
 /* eslint-disable no-shadow */
 /* eslint-disable global-require */
-const mOcKiNgCaSe = require("./index").overrideString();
+const mOcKiNgCaSe = require("./mockingcase").overrideString();
 
 describe("mockingcase", () => {
   describe("input as string", () => {
@@ -137,7 +137,7 @@ describe("mockingcase", () => {
 
   describe("default options when importing/requiring package", () => {
     test("default options", () => {
-      const mOcKiNgCaSe = require("./index").config({
+      const mOcKiNgCaSe = require("./mockingcase").config({
         onlyLetters: true,
       });
       const input = "hello123";
@@ -146,14 +146,14 @@ describe("mockingcase", () => {
     });
 
     test("NO default options", () => {
-      const mOcKiNgCaSe = require("./index").config();
+      const mOcKiNgCaSe = require("./mockingcase").config();
       const input = "hello123";
       const expectedOutput = "hElLo123";
       expect(mOcKiNgCaSe(input)).toEqual(expectedOutput);
     });
 
     test("override default options", () => {
-      const mOcKiNgCaSe = require("./index").config({
+      const mOcKiNgCaSe = require("./mockingcase").config({
         onlyLetters: true,
       });
       const input = "hello123";
@@ -165,7 +165,7 @@ describe("mockingcase", () => {
     });
 
     test("overriding default options should keep unaffected defaults", () => {
-      const mOcKiNgCaSe = require("./index").config({
+      const mOcKiNgCaSe = require("./mockingcase").config({
         onlyLetters: true,
         firstUpper: true,
       });
@@ -185,7 +185,7 @@ describe("mockingcase", () => {
     });
 
     test("For config option if the input is undefined, an error should be thrown", () => {
-      const mOcKiNgCaSe = require("./index").config({
+      const mOcKiNgCaSe = require("./mockingcase").config({
         onlyLetters: true,
       });
       const input = undefined;
@@ -210,7 +210,7 @@ describe("mockingcase", () => {
     });
     test("overrideConsole can also be implemented while requiring", () => {
       const input = "hello world";
-      const mOcKiNgCaSe = require("./index").overrideConsole();
+      const mOcKiNgCaSe = require("./mockingcase").overrideConsole();
       const expectedOutput = mOcKiNgCaSe(input);
       let consoleOutput = null;
       console.log = jest.fn(output => {

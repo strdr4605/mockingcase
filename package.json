@@ -10,15 +10,15 @@
     "url": "https://github.com/strdr4605/mockingcase/issues",
     "email": "str.dr4605@gmail.com"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "src/mockingcase.js",
+  "types": "src/mockingcase.d.ts",
   "engines": {
     "node": ">=6"
   },
   "scripts": {
     "test": "jest --coverage",
-    "format": "prettier --config .prettierrc --write \"*.[jt]s\"",
-    "lint": "eslint index.js mockingcase.test.js",
+    "format": "prettier --config .prettierrc --write \"src/*.[jt]s\"",
+    "lint": "eslint src/mockingcase.js src/mockingcase.test.js",
     "pre-commit": "npm run format && npm run lint && npm test"
   },
   "husky": {
@@ -27,8 +27,8 @@
     }
   },
   "files": [
-    "index.d.ts",
-    "index.js"
+    "src/mockingcase.d.ts",
+    "src/mockingcase.js"
   ],
   "keywords": [
     "case",
