@@ -1,5 +1,5 @@
 /**
- * Converts the input string(s) to mockingcase.
+ * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input String(s) to be converted.
  * @param {object} [options={random: false,  onlyLetters: false}] Conversion options.
  * @param {boolean} options.random=false - If case conversion should be randomized.
