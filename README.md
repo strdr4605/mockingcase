@@ -71,7 +71,7 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 - [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.config)
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
-- [<code>Browser Usage</code> ](#mOcKiNgCaSe.browserUsage)
+- [Browser Usage](#mOcKiNgCaSe.browserUsage)
 
 <a name="mOcKiNgCaSe"></a>
 
