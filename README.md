@@ -71,7 +71,7 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 - [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.config)
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
-- [Browser Usage](#browser-usage)
+- [Browser Usage](#mOcKiNgCaSe.browserUsage)
 
 <a name="mOcKiNgCaSe"></a>
 
@@ -260,9 +260,9 @@ console.log('foobar')
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
 ```
-<a name="mOcKiNgCaSe"></a>
-
 <hr>
+
+<a name="mOcKiNgCaSe.browserUsage"></a>
 
 ## Browser Usage [:arrow_up:](#api)
 mOcKiNgCaSe can be used in a node environment, as well as in the browser. You can serve it yourself, or pull it from a CDN. For example:
