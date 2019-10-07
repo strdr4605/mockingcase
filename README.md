@@ -260,9 +260,9 @@ console.log('foobar')
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
 ```
-<a name="mOcKiNgCaSe.browserUsage"></a>
-
 <hr>
+
+<a name="mOcKiNgCaSe.browserUsage"></a>
 
 ## Browser Usage [:arrow_up:](#api)
 mOcKiNgCaSe can be used in a node environment, as well as in the browser. You can serve it yourself, or pull it from a CDN. For example:
