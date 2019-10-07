@@ -71,7 +71,7 @@ mOcKiNgCaSe('ABCDEF', {lower: 'bcd'});
 - [mOcKiNgCaSe.config(defaultOptions) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.config)
 - [mOcKiNgCaSe.log(input, [options])](#mOcKiNgCaSe.log)
 - [mOcKiNgCaSe.overrideConsole([options]) ⇒ <code>mOcKiNgCaSe</code>](#mOcKiNgCaSe.overrideConsole)
-- [Browser Usage](#browser-usage)
+- [<code>Browser Usage</code> ](#mOcKiNgCaSe.browserUsage)
 
 <a name="mOcKiNgCaSe"></a>
 
@@ -260,7 +260,7 @@ console.log('foobar')
 mOcKiNgCaSe('foobar');
 // => 'fOoBaR'
 ```
-<a name="mOcKiNgCaSe"></a>
+<a name="mOcKiNgCaSe.browserUsage"></a>
 
 <hr>
 
