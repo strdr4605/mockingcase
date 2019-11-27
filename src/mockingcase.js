@@ -1,12 +1,12 @@
 /**
  * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input String(s) to be converted.
- * @param {object} [options={random: false,  onlyLetters: false}] Conversion options.
+ * @param {object} [options={random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}] Conversion options.
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
- * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
- * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized.
+ * @param {(string | RegExp)} options.upper=null - Characters or substring set to change to uppercase
+ * @param {(string | RegExp)} options.lower=null - Characters or substring set to change to lowercase
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {string} string in mOcKiNgCaSe
  */
@@ -64,10 +64,12 @@ function mockingcase(input = "", options) {
 /**
  * Outputs a message to the console in mOcKiNgCaSe.
  * @param {(string | string[])} input String(S) to be converted.
- * @param {object} [options={random: false}] Options for converting.
+ * @param {object} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] Conversion options
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized.
+ * @param {(string | RegExp)} options.upper=null - Characters or substring set to change to uppercase
+ * @param {(string | RegExp)} options.lower=null - Characters or substring set to change to lowercase
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  */
 mockingcase.log = (input, options) => console.log(mockingcase(input, options));
@@ -92,12 +94,12 @@ mockingcase.config = defaultOptions => (input = "", overridedDefaultOptions) => 
 mockingcase.overrideString = () => {
   /**
    * Converts this string to mOcKiNgCaSe.
-   * @param {object} [options={random: false}] Options for converting.
+   * @param {object} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] Options for converting.
    * @param {boolean} options.random=false - If case conversion should be randomized.
    * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
-   * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
-   * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
-   * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
+   * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized.
+   * @param {(string | RegExp)} options.upper=null - Characters or substring set to change to uppercase
+   * @param {(string | RegExp)} options.lower=null - Characters or substring set to change to lowercase
    * When combined with `options.random`, the first letter of the random string will be capitalized.
    * @returns {string} string in mOcKiNgCaSe
    * @see mockingcase
@@ -111,12 +113,12 @@ mockingcase.overrideString = () => {
 
 /**
  * Overrides console.log input to print the input mOcKiNgCaSe.
- * @param {object} [options={random: false}] Options for converting.
+ * @param {object} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] Options for converting.
  * @param {boolean} options.random=false - If case conversion should be randomized.
  * @param {boolean} options.onlyLetters=false - If non letters characters should be removed.
- * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
- * @param {(string | RegExp)} options.upper=null - matched RegExp guarenteed to be upper cased
- * @param {(string | RegExp)} options.lower=null - matched RegExp guarenteed to be lower cased
+ * @param {boolean} options.firstUpper=false - If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized.
+ * @param {(string | RegExp)} options.upper=null - Characters or substring set to change to uppercase
+ * @param {(string | RegExp)} options.lower=null - Characters or substring set to change to lowercase
  * When combined with `options.random`, the first letter of the random string will be capitalized.
  * @returns {function} mockingcase function
  * @see mockingcase
