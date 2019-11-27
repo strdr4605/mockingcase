@@ -142,8 +142,8 @@ function isArrayOfStrings(input) {
 
   input.forEach((value, i) => {
     if (typeof value !== "string") {
-    throw TypeError(`Expected array of strings but got type '${typeof value}' at index ${i}`);
-  }
+      throw TypeError(`Expected array of strings but got type '${typeof value}' at index ${i}`);
+    }
   });
 
   return true;
