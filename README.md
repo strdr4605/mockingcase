@@ -274,7 +274,7 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </head>
 <body>
 </body>
-<script src="https://unpkg.com/mockingcase/index.js"></script>
+<script src="https://unpkg.com/@strdr4605/mockingcase@1.10.3/src/mockingcase.js"></script>
 <script>
   const output = mockingcase('foo-bar');
   console.log(output);
