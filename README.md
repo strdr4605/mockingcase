@@ -291,10 +291,9 @@ Simply pull in one of the following JS files below.
 
 |Name|Link|
 |-|-|
-|unpkg.com|https://unpkg.com/mockingcase/index.js|
-|JSDelivr.com|https://cdn.jsdelivr.net/npm/mockingcase/index.min.js|
+|unpkg.com|https://unpkg.com/@strdr4605/mockingcase@1.10.3/src/mockingcase.js|
+|JSDelivr.com|https://cdn.jsdelivr.net/npm/@strdr4605/mockingcase@1.10.3/src/mockingcase.min.js|
 
 **See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**
 
 <a href="https://www.buymeacoffee.com/strdr4605"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"  target="_blank"></a>
-
