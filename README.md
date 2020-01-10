@@ -73,9 +73,25 @@ mockingcase('ABCDEF', {lower: 'bcd'});
 - [mockingcase.overrideConsole([options]) ⇒ <code>mockingcase</code>](#mockingcase.overrideConsole)
 - [Browser Usage](#mockingcase.browserUsage)
 
+## Functions
+
+<dl>
+<dt><a href="#mockingcase">mockingcase(input, [options])</a> ⇒ <code>string</code></dt>
+<dd><p>Converts the input string(s) to mOcKiNgCaSe.</p>
+</dd>
+</dl>
+
+## Typedefs
+
+<dl>
+<dt><a href="#Options">Options</a> : <code>Object</code></dt>
+<dd><p>Options for mockingcase</p>
+</dd>
+</dl>
+
 <a name="mockingcase"></a>
 
-### mockingcase(input, [options]) ⇒ <code>string</code> [:arrow_up:](#api)
+## mockingcase(input, [options]) ⇒ <code>string</code> [:arrow_up:](#api)
 Converts the input string(s) to mOcKiNgCaSe.
 
 **Kind**: global function
@@ -83,13 +99,8 @@ Converts the input string(s) to mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>string[]</code> |  | String(s) to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
-| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
-| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
-| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
-| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
+| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(s) to be converted. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
 
 ```js
 mockingcase('foo-bar');
@@ -141,9 +152,8 @@ mockingcase(undefined);
 ### mockingcase.overrideString() ⇒ <code>mockingcase</code> [:arrow_up:](#api)
 Creates `String.prototype.toMockingCase()`.
 
-**Kind**: global function
-**Returns**: <code>mockingcase</code> - The mockingcase module.
-**See**: <code>toMockingCase</code>
+**Kind**: static method of [<code>mockingcase</code>](#mockingcase)
+**Returns**: mockingcase
 
 ```js
 mockingcase.overrideString();
@@ -168,12 +178,8 @@ Converts `this` string to mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
-| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
-| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
-| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
-| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
+| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
 
 ```js
 'foo_bar'.toMockingCase();
@@ -187,19 +193,15 @@ Converts `this` string to mOcKiNgCaSe.
 <a name="mockingcase.config"></a>
 
 ### mockingcase.config(defaultOptions) ⇒ <code>mockingcase</code> [:arrow_up:](#api)
-Outputs a mOcKiNgCaSe with default options.
+Outputs a mockingcase with default options.
 
 **Kind**: static method of [<code>mockingcase</code>](#mockingcase)
 **Returns**: mockingcase with default options
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| defaultOptions | <code>object</code> |  | Options for converting |
-| defaultOptions.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
-| defaultOptions.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
-| defaultOptions.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
-| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
-| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
+| defaultOptions | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+
 
 ```js
 const mockingcase = require('@strdr4605/mockingcase').config({onlyLetters: true, firstUpper: true});
@@ -222,13 +224,8 @@ Outputs a message to the console in mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| input | <code>string</code> \| <code>string[]</code> |  | String(S) to be converted |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
-| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
-| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
-| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
-| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
+| input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
 
 ```js
 mockingcase.log('foo bar');
@@ -242,16 +239,15 @@ mockingcase.log('foo bar');
 <a name="mockingcase.overrideConsole"></a>
 
 ### mockingcase.overrideConsole([options]) ⇒ <code>mockingcase</code> [:arrow_up:](#api)
-Overrides the console.log input annd prints it in the mOcKiNgCaSe.
+Overrides console.log input to print the input mOcKiNgCaSe.
+
+**Kind**: static method of [<code>mockingcase</code>](#mockingcase)
+**Returns**: <code>function</code> - mockingcase function
+**See**: mockingcase
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [options] | <code>object</code> | <code>{random: false, onlyLetters: false, firstUpper: false}</code> | Conversion options |
-| options.random | <code>boolean</code> | <code>false</code> | If case conversion should be randomized |
-| options.onlyLetters | <code>boolean</code> | <code>false</code> | If non letters characters should be removed |
-| options.firstUpper | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with `options.random`, the first letter of the random string will be capitalized |
-| options.upper | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to uppercase |
-| options.lower | <code>RegExp</code> \| <code>string</code> | <code>null</code> | Characters or substring set to change to lowercase |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
 
 ```js
 const mockingcase = require('@strdr4605/mockingcase').overrideConsole();
@@ -260,6 +256,24 @@ console.log('foobar')
 mockingcase('foobar');
 // => 'fOoBaR'
 ```
+<hr>
+
+<a name="Options"></a>
+
+## Options : <code>Object</code>
+Options for mockingcase
+
+**Kind**: global typedef
+**Properties**
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| [random] | <code>boolean</code> | <code>false</code> | If case conversion should be randomized. |
+| [onlyLetters] | <code>boolean</code> | <code>false</code> | If non letters characters should be removed. |
+| [firstUpper] | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized. |
+| [upper] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to uppercase, `upper` has higher priority that `lower`. |
+| [lower] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to lowercase. |
+
 <hr>
 
 <a name="mockingcase.browserUsage"></a>
