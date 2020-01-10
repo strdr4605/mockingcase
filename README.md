@@ -71,6 +71,7 @@ mockingcase('ABCDEF', {lower: 'bcd'});
 - [mockingcase.config(defaultOptions) ⇒ <code>mockingcase</code>](#mockingcase.config)
 - [mockingcase.log(input, [options])](#mockingcase.log)
 - [mockingcase.overrideConsole([options]) ⇒ <code>mockingcase</code>](#mockingcase.overrideConsole)
+- [Options](#Options)
 - [Browser Usage](#mockingcase.browserUsage)
 
 ## Functions
@@ -260,7 +261,7 @@ mockingcase('foobar');
 
 <a name="Options"></a>
 
-## Options : <code>Object</code>
+## Options : <code>Object</code> [:arrow_up:](#api)
 Options for mockingcase
 
 **Kind**: global typedef
