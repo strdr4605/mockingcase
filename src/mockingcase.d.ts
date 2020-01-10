@@ -2,7 +2,7 @@
 // Project: https://github.com/strdr4605/mockingcase
 // Definitions by: Dragoș Străinu https://github.com/strdr4605
 
-declare module "mockingcase" {
+declare module "@strdr4605/mockingcase" {
   interface Options {
     random?: boolean;
     onlyLetters?: boolean;
