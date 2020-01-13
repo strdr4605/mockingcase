@@ -299,7 +299,7 @@ mOcKiNgCaSe can be used in a node environment, as well as in the browser. You ca
 </html>
 ```
 ### Self Hosting
-To host mockingcase yourself simply put `index.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
+To host mockingcase yourself simply put `src/mockingcase.js` wherever your static content (like CSS stylesheets) are kept. You can also download a minified file from one of the CDNs below.
 
 ### CDN Usage
 Simply pull in one of the following JS files below.
