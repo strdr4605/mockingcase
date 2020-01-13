@@ -95,8 +95,8 @@ mockingcase('ABCDEF', {lower: 'bcd'});
 ## mockingcase(input, [options]) ⇒ <code>string</code> [:arrow_up:](#api)
 Converts the input string(s) to mOcKiNgCaSe.
 
-**Kind**: global function
-**Returns**: <code>string</code> - string in mOcKiNgCaSe
+**Kind**: global function 
+**Returns**: <code>string</code> - string in mOcKiNgCaSe  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -153,8 +153,8 @@ mockingcase(undefined);
 ### mockingcase.overrideString() ⇒ <code>mockingcase</code> [:arrow_up:](#api)
 Creates `String.prototype.toMockingCase()`.
 
-**Kind**: static method of [<code>mockingcase</code>](#mockingcase)
-**Returns**: mockingcase
+**Kind**: static method of [<code>mockingcase</code>](#mockingcase)  
+**Returns**: mockingcase  
 
 ```js
 mockingcase.overrideString();
@@ -174,8 +174,8 @@ Converts `this` string to mOcKiNgCaSe.
 
 **NOTE**: this function is created by invoking `mockingcase.overrideString()`.
 
-**Kind**: prototype
-**Returns**: <code>string</code> - local string in mOcKiNgCaSe
+**Kind**: prototype  
+**Returns**: <code>string</code> - local string in mOcKiNgCaSe  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -196,8 +196,8 @@ Converts `this` string to mOcKiNgCaSe.
 ### mockingcase.config(defaultOptions) ⇒ <code>mockingcase</code> [:arrow_up:](#api)
 Outputs a mockingcase with default options.
 
-**Kind**: static method of [<code>mockingcase</code>](#mockingcase)
-**Returns**: mockingcase with default options
+**Kind**: static method of [<code>mockingcase</code>](#mockingcase)  
+**Returns**: mockingcase with default options  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -242,9 +242,9 @@ mockingcase.log('foo bar');
 ### mockingcase.overrideConsole([options]) ⇒ <code>mockingcase</code> [:arrow_up:](#api)
 Overrides console.log input to print the input mOcKiNgCaSe.
 
-**Kind**: static method of [<code>mockingcase</code>](#mockingcase)
-**Returns**: <code>function</code> - mockingcase function
-**See**: mockingcase
+**Kind**: static method of [<code>mockingcase</code>](#mockingcase)  
+**Returns**: <code>function</code> - mockingcase function  
+**See**: mockingcase  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -264,7 +264,7 @@ mockingcase('foobar');
 ## Options : <code>Object</code> [:arrow_up:](#api)
 Options for mockingcase
 
-**Kind**: global typedef
+**Kind**: global typedef  
 **Properties**
 
 | Name | Type | Default | Description |
