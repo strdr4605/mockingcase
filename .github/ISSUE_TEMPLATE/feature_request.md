@@ -30,7 +30,7 @@ sample code here
 This section is written by maintainers. Remove it if it's not appropriate
 -->
 
-- [ ] Implement feature.
+- [ ] Implement feature
 - [ ] Comment using jsdoc
 - [ ] Add unit test 
 - [ ] Add declaration for Typescript, [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
