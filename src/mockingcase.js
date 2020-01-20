@@ -117,6 +117,64 @@ mockingcase.overrideConsole = (options = {}) => {
   return mockingcase;
 };
 
+// ============================================================
+// ==================== WORK IN PROCESS =======================
+// ============================================================
+// ==== https://github.com/strdr4605/mockingcase/issues/37 ====
+// ============================================================
+
+/**
+ * Transform all text nodes in a tree to mockingcase
+ * @param {Node} root - starting node for document.createTreeWalker
+ */
+function mockingcaseTreeWalker(root) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+
+  let node = walker.nextNode();
+
+  while (node) {
+    node.nodeValue = mockingcase(node.nodeValue);
+    node = walker.nextNode();
+  }
+}
+
+/**
+ * Should watch for all changes in the DOM and transform any text to mockingcase
+ */
+mockingcase.parseAllHTML = () => {
+  // Select the node that will be observed for mutations
+  const targetNode = document.getElementsByTagName("body")[0];
+
+  // Options for the observer (which mutations to observe)
+  const config = { childList: true, subtree: true };
+
+  // Callback function to execute when mutations are observed
+  const mutationObserverCallback = mutationsList => {
+    // eslint-disable-next-line no-restricted-syntax
+    mutationsList.forEach(mutation => {
+      if (mutation.type === "childList") {
+        console.log(mutation);
+        mutation.addedNodes.forEach(node => {
+          mockingcaseTreeWalker(node);
+        });
+      }
+    });
+  };
+
+  // Create an observer instance linked to the callback function
+  const observer = new MutationObserver(mutationObserverCallback);
+
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, config);
+};
+
+// ============================================================
+// ============================================================
+// ============================================================
+// ============================================================
+// ============================================================
+// ============================================================
+
 /**
  * @param {string|string[]} input The user-given input.
  * @private
