@@ -101,7 +101,7 @@ Converts the input string(s) to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(s) to be converted. |
-| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: '', lower: ''}</code> | Conversion options. |
 
 ```js
 mockingcase('foo-bar');
@@ -180,7 +180,7 @@ Converts `this` string to mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted. |
-| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: '', lower: ''}</code> | Conversion options. |
 
 ```js
 'foo_bar'.toMockingCase();
@@ -201,7 +201,7 @@ Outputs a mockingcase with default options.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| defaultOptions | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+| defaultOptions | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: '', lower: ''}</code> | Conversion options. |
 
 
 ```js
@@ -226,7 +226,7 @@ Outputs a message to the console in mOcKiNgCaSe.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | input | <code>string</code> \| <code>Array.&lt;string&gt;</code> |  | String(S) to be converted. |
-| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: '', lower: ''}</code> | Conversion options. |
 
 ```js
 mockingcase.log('foo bar');
@@ -248,7 +248,7 @@ Overrides console.log input to print the input mOcKiNgCaSe.
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: null, lower: null}</code> | Conversion options. |
+| [options] | [<code>Options</code>](#Options) | <code>{random: false,  onlyLetters: false, firstUpper: false, upper: '', lower: ''}</code> | Conversion options. |
 
 ```js
 const mockingcase = require('@strdr4605/mockingcase').overrideConsole();
@@ -272,8 +272,8 @@ Options for mockingcase
 | [random] | <code>boolean</code> | <code>false</code> | If case conversion should be randomized. |
 | [onlyLetters] | <code>boolean</code> | <code>false</code> | If non letters characters should be removed. |
 | [firstUpper] | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized. |
-| [upper] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to uppercase, `upper` has higher priority that `lower`. |
-| [lower] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to lowercase. |
+| [upper] | <code>string</code> \| <code>RegExp</code> | <code>''</code> | Characters or substring set to change to uppercase, `upper` has higher priority that `lower`. |
+| [lower] | <code>string</code> \| <code>RegExp</code> | <code>''</code> | Characters or substring set to change to lowercase. |
 
 <hr>
 

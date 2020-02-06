@@ -6,15 +6,15 @@
  * @property {boolean} [firstUpper=false] - If the first letter should be capitalized
  * instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
  * When combined with options.random, the first letter of the random string will be capitalized.
- * @property {(string | RegExp)} [upper=null] - Characters or substring set to change to uppercase,
+ * @property {(string | RegExp)} [upper=''] - Characters or substring set to change to uppercase,
  * `upper` has higher priority that `lower`.
- * @property {(string | RegExp)} [lower=null] - Characters or substring set to change to lowercase.
+ * @property {(string | RegExp)} [lower=''] - Characters or substring set to change to lowercase.
  */
 
 /**
  * Converts the input string(s) to mOcKiNgCaSe.
  * @param {(string | string[])} input - String(s) to be converted.
- * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] - Conversion options.
+ * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: '', lower: ''}] - Conversion options.
  * @returns {string} string in mOcKiNgCaSe.
  */
 function mockingcase(input = "", options) {
@@ -23,8 +23,8 @@ function mockingcase(input = "", options) {
       random: false,
       onlyLetters: false,
       firstUpper: false,
-      upper: null,
-      lower: null,
+      upper: "",
+      lower: "",
     },
     options,
   );
@@ -71,13 +71,13 @@ function mockingcase(input = "", options) {
 /**
  * Outputs a message to the console in mOcKiNgCaSe.
  * @param {(string | string[])} input - String(S) to be converted.
- * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] - Conversion options.
+ * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: '', lower: ''}] - Conversion options.
  */
 mockingcase.log = (input, options) => console.log(mockingcase(input, options));
 
 /**
  * Outputs a mockingcase with default options.
- * @param {Options} [defaultOptions={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] - Conversion options.
+ * @param {Options} [defaultOptions={random: false, onlyLetters: false, firstUpper: false, upper: '', lower: ''}] - Conversion options.
  * @returns mockingcase with default options
  */
 mockingcase.config = defaultOptions => (input = "", overridedDefaultOptions) => {
@@ -92,7 +92,7 @@ mockingcase.config = defaultOptions => (input = "", overridedDefaultOptions) => 
 mockingcase.overrideString = () => {
   /**
    * Converts this string to mOcKiNgCaSe.
-   * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] Conversion options.
+   * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: '', lower: ''}] Conversion options.
    * @returns {string} The string in mOcKiNgCaSe
    * @see mockingcase
    */
@@ -105,7 +105,7 @@ mockingcase.overrideString = () => {
 
 /**
  * Overrides console.log input to print the input mOcKiNgCaSe.
- * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: null, lower: null}] Conversion options.
+ * @param {Options} [options={random: false, onlyLetters: false, firstUpper: false, upper: '', lower: ''}] Conversion options.
  * @returns {function} mockingcase function
  * @see mockingcase
  */
