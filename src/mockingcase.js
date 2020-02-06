@@ -6,9 +6,9 @@
  * @property {boolean} [firstUpper=false] - If the first letter should be capitalized
  * instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE).
  * When combined with options.random, the first letter of the random string will be capitalized.
- * @property {(string | RegExp)} [upper=null] - Characters or substring set to change to uppercase,
+ * @property {(string | RegExp)} [upper=''] - Characters or substring set to change to uppercase,
  * `upper` has higher priority that `lower`.
- * @property {(string | RegExp)} [lower=null] - Characters or substring set to change to lowercase.
+ * @property {(string | RegExp)} [lower=''] - Characters or substring set to change to lowercase.
  */
 
 /**

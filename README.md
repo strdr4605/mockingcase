@@ -272,8 +272,8 @@ Options for mockingcase
 | [random] | <code>boolean</code> | <code>false</code> | If case conversion should be randomized. |
 | [onlyLetters] | <code>boolean</code> | <code>false</code> | If non letters characters should be removed. |
 | [firstUpper] | <code>boolean</code> | <code>false</code> | If the first letter should be capitalized instead of the second when converting to mOcKiNgCaSe (e.g. MoCkInGcAsE). When combined with options.random, the first letter of the random string will be capitalized. |
-| [upper] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to uppercase, `upper` has higher priority that `lower`. |
-| [lower] | <code>string</code> \| <code>RegExp</code> | <code>null</code> | Characters or substring set to change to lowercase. |
+| [upper] | <code>string</code> \| <code>RegExp</code> | <code>''</code> | Characters or substring set to change to uppercase, `upper` has higher priority that `lower`. |
+| [lower] | <code>string</code> \| <code>RegExp</code> | <code>''</code> | Characters or substring set to change to lowercase. |
 
 <hr>
 
