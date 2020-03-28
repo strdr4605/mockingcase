@@ -306,8 +306,8 @@ Simply pull in one of the following JS files below.
 
 |Name|Link|
 |-|-|
-|unpkg.com|https://unpkg.com/@strdr4605/mockingcase@1.10.3/src/mockingcase.js|
-|JSDelivr.com|https://cdn.jsdelivr.net/npm/@strdr4605/mockingcase@1.10.3/src/mockingcase.min.js|
+|unpkg.com|https://unpkg.com/@strdr4605/mockingcase|
+|JSDelivr.com|https://cdn.jsdelivr.net/npm/@strdr4605/mockingcase|
 
 **See also [Mockingcase bindings for ReasonML](https://redex.github.io/package/unpublished/strdr4605/bs-mockingcase)**
 
