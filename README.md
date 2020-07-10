@@ -1,4 +1,5 @@
-# mockingcase [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase) [![Hits-of-Code](https://hitsofcode.com/github/strdr4605/mockingcase)](https://hitsofcode.com/view/github/strdr4605/mockingcase)
+# mockingcase [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase) [![Hits-of-Code](https://hitsofcode.com/github/strdr4605/mockingcase)](https://hitsofcode.com/view/github/strdr4605/mockingcase) [![HitCount](http://hits.dwyl.com/strdr4605/mockingcase.svg)](http://hits.dwyl.com/strdr4605/mockingcase)
+
 
 
 > Convert a string to mOcKiNgCaSe.
