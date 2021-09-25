@@ -1,4 +1,4 @@
-# mockingcase [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase) [![Hits-of-Code](https://hitsofcode.com/github/strdr4605/mockingcase)](https://hitsofcode.com/view/github/strdr4605/mockingcase) [![HitCount](http://hits.dwyl.com/strdr4605/mockingcase.svg)](http://hits.dwyl.com/strdr4605/mockingcase)
+# mockingcase [![Build Status](https://travis-ci.org/strdr4605/mockingcase.svg?branch=master)](https://travis-ci.org/strdr4605/mockingcase) [![Hits-of-Code](https://hitsofcode.com/github/strdr4605/mockingcase)](https://hitsofcode.com/view/github/strdr4605/mockingcase) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fstrdr4605%2Fmockingcase&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
 
