@@ -41,7 +41,7 @@ function mockingcase(input = "", options) {
 
   // Filter out any characters which are not alphabetic or whitespace.
   if (options.onlyLetters) {
-    input = input.replace(/[^a-zA-Z\s]/g, "");
+    input = input.replace(/[^\p{L}\s]/gu, "");
   }
 
   if (options.random) {
