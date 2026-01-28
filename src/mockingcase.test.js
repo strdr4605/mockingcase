@@ -133,6 +133,22 @@ describe("mockingcase", () => {
       const expectedOutput = "hElLo wOrLd";
       expect(mockingcase(input, options)).toEqual(expectedOutput);
     });
+
+    test("should preserve accented characters", () => {
+      const input = "café naïve résumé";
+      const options = { onlyLetters: true };
+      const output = mockingcase(input, options);
+
+      expect(output.toLowerCase()).toBe("café naïve résumé");
+    });
+
+    test("should preserve non-Latin Unicode letters", () => {
+      const input = "हेलो world 你好";
+      const options = { onlyLetters: true };
+      const output = mockingcase(input, options);
+
+      expect(output.toLowerCase()).toBe("हेलो world 你好");
+    });
   });
 
   describe("default options when importing/requiring package", () => {
